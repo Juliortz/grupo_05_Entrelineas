@@ -11,7 +11,7 @@ Laura Elías Soy de Tucumán, Argentina, soy arquitecta diseñando un nuevo cami
 
 Lucila Guelman : Soy de Capital Federal (Buenos Aires), Argentina. Actualmente tengo 21 años. Formo parte de la comunidad judía y actualmente me estoy preparando para emprender mi viaje a Israel, lo cual es todo un desafío.
 
-Sebastián Darmun vivo en Buenos Aires, Argentina. Tengo veinte años. Estoy en etapa de decision, ver que cosas me gustan/interesan para poder ver que camino/carrera seguir en un futuro y que mejor manera que probando?
+Sebastián Darmun vivo en Buenos Aires, Argentina. Tengo veinte años. Actualmente me encuentro en etapa de decision, ver que cosas me gustan/interesan para poder ver que camino/carrera seguir en un futuro y que mejor manera que probando?
 
 SITIOS DE REFERENCIA:
 
