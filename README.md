@@ -9,7 +9,7 @@ Julio Ortiz Venezolano viviendo en Buenos Aires, Argentina. Treintaiún años y 
 
 Laura Elías Soy de Tucumán, Argentina, soy arquitecta diseñando un nuevo camino para mí. Tengo 3 hijos y un compañero de vida. Me gusta el trecking y andar en bici.
 
-Lucila Guelman
+Lucila Guelman : Soy de Capital Federal (Buenos Aires), Argentina. Actualmente tengo 21 años. Formo parte de la comunidad judía y actualmente me estoy preparando para emprender mi viaje a Israel, lo cual es todo un desafío.
 
 Sebastián Darmun
 
