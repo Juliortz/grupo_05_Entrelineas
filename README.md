@@ -1,5 +1,5 @@
 README.md
-PAPEL & TINTA
+ENTRELÍNEAS
 
 Somos una empresa creada por cuatro amigos que decidimos unirnos en torno a este proyecto, con el fin de brindar al resto del mundo, un sitio donde poder adquirir el libro de su preferencia, ya que ofrecemos el mayor surtido de estos, de todos los géneros, para todas las edades, de una amplia gama de editoriales, tanto nacionales como extranjeras, para así fomentar el amor por la lectura y garantizar el aprendizaje, enriquecimiento cultural y entretenimiento de todos.
 
