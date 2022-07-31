@@ -9,6 +9,11 @@ app.get('/', (req,res)=>{
   }
 );
 
+app.get('/productDetail', (req,res)=>{
+  res.sendFile(__dirname + '/view/productDetail.html')
+  }
+);
+
 app.listen(3000, ()=> {
   console.log('Servidor funcionando')
 })

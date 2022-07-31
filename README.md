@@ -24,3 +24,5 @@ https://www.penguinlibros.com/ar/ Nos pareció que estaba bastante recargada la 
 https://www.cuspide.com/ Aunque la tipografía y la combinación de colores nos parecieron interesantes, del lado derecho de la web se ubica un recuadro con información desordenada que no solo ocupa espacio, sino que también, a nuestro parecer, sobrecarga la página. Nos gustó que al seleccionar el libro, nos sugiera otros basados en las preferencias de otros usuarios con los que podrían compartirse gustos. Ejemplo: "Los usuarios que leyeron este libro, también leyeron..."
 
 https://www.bajalibros.com/AR Resulta interesante que al final de la página de inicio (Home), se incluya un resumen con información acerca de la compañía, su visión y misión. También nos gustó que incluyera un Top10 de los libros más leídos hasta el momento
+
+ENLACE AL TABLERO DE TRABAJO: https://trello.com/b/fFbLVAPn/proyecto-integrador-dh
