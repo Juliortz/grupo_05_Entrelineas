@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+header {
+    display: flex;
+ }
+
+header section.top-bar {
+    background-color: #8fc1a9;
+    width: 100%;    
+}
+header section.top-bar p{
+    color: #faf3dd;
+    font-size: 18px;
+    text-align: center;
+}
+section.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+div.menu-hamburquesa {
+    text-align: center;
+}
+div.menu-hamburquesa i{
+    color: #7caa98;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+.main-logo {
+    width: 45%;
+    max-width: 290px;
+}
+.main-logo img {
+    width: 100%;
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .form .input{
+    background-color: #faf3dd;
+    border: 1px solid #7caa98;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    width: 90%;
+    display: none;
+}
+nav.main-nav{
+    display: none;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+nav.main-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+section.carrusel {
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    background-color: #8fc1a9;
+}
+section.productos{
+    margin-top: 20px;
+    text-align: center;
+}
+@media (min-width:740px){
+    div.menu-hamburquesa {
+        display: none;
+    }
+    .form{
+        width: 45%;
+    }
+    header .form .input{
+        display: flex;
+    } 
+    nav.main-nav{
+        display: flex;
+    }
+}
