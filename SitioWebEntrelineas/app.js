@@ -10,7 +10,7 @@ app.get('/', (req,res)=>{
 );
 
 app.get('/productDetail', (req,res)=>{
-  res.sendFile(__dirname + '/view/productDetail.html')
+  res.sendFile(__dirname + '/views/productDetail.html')
   }
 );
 

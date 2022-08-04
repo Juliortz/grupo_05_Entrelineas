@@ -15,7 +15,7 @@
 
   <header>
     <section class="top-bar">
-      <p>Lugar para promociones</p>
+      <h3>Lugar para promociones</h3>
     </section>
     <section class="main-header">
       <div class="menu-hamburquesa">
@@ -24,10 +24,14 @@
       <div class="main-logo">
         <img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas">
       </div>
-      <div class="form">
-        <div class="input">Buscar libro, autor y más</div>
-        <div class="submit"><i class="fa fa-search"></i></div>
-    </div>
+      <div class="search-form">
+        <form method="get" action="#">
+          <label for="search-bar">
+          <input type="text" name="search-bar" id="search-bar" placeholder="Buscar libro, autor y más..." class="search-bar">
+          </label>
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
     <div class="carrito">
       <i class="fas fa-shopping-cart"></i>
     </div>
@@ -45,10 +49,42 @@
   </header>
 
   <main>
+    
     <section class="carrusel">
     </section>
-    <section class="productos">
-      <h2>Novedades</h2>
+
+    <section class="product">
+      <h3>Novedades</h3>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="#" alt="Libro boquitas pintadas"/>
+        </div>
+        <div class="product-title">
+          <h4>Boquitas pintadas</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="#" alt="Libro Caballo de fuego congo"/>
+        </div>
+        <div class="product-title">
+          <h4>Caballo de fuego CONGO</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="#" alt="Libro El hechizo del agua"/>
+        </div>
+        <div class="product-title">
+          <h4>El hechizo del agua</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
 
     </section>
 

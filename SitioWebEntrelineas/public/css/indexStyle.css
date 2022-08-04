@@ -7,18 +7,23 @@
 body {
     font-family: 'Raleway', sans-serif;
 }
+
 header {
     display: flex;
+    width: 100vw;
+    justify-content: space-between;
  }
 
 header section.top-bar {
     background-color: #8fc1a9;
     width: 100%;    
 }
-header section.top-bar p{
+header section.top-bar h3{
     color: #faf3dd;
     font-size: 18px;
     text-align: center;
+    padding: 10px;
+    width: 100%; 
 }
 section.main-header {
     display: flex;
@@ -27,6 +32,7 @@ section.main-header {
     width: 100%;
 }
 div.menu-hamburquesa {
+    width: 10%;
     text-align: center;
 }
 div.menu-hamburquesa i{
@@ -44,52 +50,89 @@ div.menu-hamburquesa i{
 .main-logo img {
     width: 100%;
 }
-.form{
+section div.search-form {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-header .form .input{
-    background-color: #faf3dd;
-    border: 1px solid #7caa98;
-    outline: none;
-    color: #666;
-    padding: 2px;
-    width: 90%;
+
+section div.search-form form input{
     display: none;
 }
-nav.main-nav{
-    display: none;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
+section div.search-form form button {
+    background-color: white;
+    border: 0px;
 }
+nav.main-nav {
+    display: none;
+}
+
 nav.main-nav a{
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-section.carrusel {
+section.product {
+    border: red solid 2px;
+    display: flex;
     width: 100%;
-    height: 150px;
     margin-top: 20px;
-    background-color: #8fc1a9;
+    padding: 10px;
+    justify-content: space-around;
 }
-section.productos{
-    margin-top: 20px;
+section.product h3 {
+    width: 100%;
     text-align: center;
+    padding-bottom: 5px;
+}
+.product-box {
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    width: 45%;
+    border: yellow solid 2px;
+}
+section div.product-img {
+    border: blue solid 2px;
+    width: 100px;
+    height: 100px;
+    margin: 10px 5px;
 }
 @media (min-width:740px){
     div.menu-hamburquesa {
         display: none;
     }
-    .form{
+    section div.search-form {
         width: 45%;
     }
-    header .form .input{
+    section div.search-form form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    section div.search-form form label {
+        width: 90%;
+    }
+    section div.search-form form label input{
+        background-color: #faf3dd;
+        border: 1px solid #7caa98;
+        outline: none;
+        color: #666;
+        padding: 2px;
+        width: 100%;
         display: flex;
     } 
+    section div.search-form form i {
+        background-color: white;
+        border: 0px;
+    }
     nav.main-nav{
         display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .product-box {   
+        width: 30%;
+        border: yellow solid 2px;
     }
 }
