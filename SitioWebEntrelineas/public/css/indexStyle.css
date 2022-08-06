@@ -65,19 +65,23 @@ section div.search-form form button {
 nav.main-nav {
     display: none;
 }
-
+div.carrito a {
+    color: black;
+}
+div.login a{
+    color: black;
+}
 nav.main-nav a{
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 section.product {
-    border: red solid 2px;
     display: flex;
     width: 100%;
     margin-top: 20px;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 section.product h3 {
     width: 100%;
@@ -89,13 +93,28 @@ section.product h3 {
     flex-direction: column;
     align-items : center;
     width: 45%;
-    border: yellow solid 2px;
+    padding: 10px 5px;
 }
 section div.product-img {
-    border: blue solid 2px;
+    border: #8fc1a9 solid 2px;
     width: 100px;
     height: 100px;
     margin: 10px 5px;
+}
+footer div.conteiner {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #faf3dd;
+    padding: 10px;
+}
+footer div.conteiner div.footer-item {
+    padding: 5px 0px;
+    width: 25%;
+}
+footer div.conteiner div.footer-item ul {
+    text-decoration: none;
 }
 @media (min-width:740px){
     div.menu-hamburquesa {
@@ -133,6 +152,17 @@ section div.product-img {
     }
     .product-box {   
         width: 30%;
-        border: yellow solid 2px;
+        max-width: 230px;
+    }
+}
+@media (min-width:980px) {
+    .product-box {   
+        width: 18%;
+    }
+    footer div.conteiner {
+        width: 100vw;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
     }
 }
