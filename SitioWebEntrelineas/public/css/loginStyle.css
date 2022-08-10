@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+  
+header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    opacity: 0.2;
+ }
+
+header section.top-bar {
+    background-color: #8fc1a9;
+    width: 100%;    
+}
+header section.top-bar h3{
+    color: #faf3dd;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    width: 100%; 
+}
+section.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+div.menu-hamburquesa {
+    width: 10%;
+    text-align: center;
+}
+div.menu-hamburquesa i{
+    color: #7caa98;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+.main-logo {
+    width: 45%;
+    max-width: 290px;
+}
+.main-logo img {
+    width: 100%;
+}
+section div.search-form {
+    display: flex;
+    align-items: center;
+}
+
+section div.search-form form input{
+    display: none;
+}
+section div.search-form form button {
+    background-color: white;
+    border: 0px;
+}
+nav.main-nav {
+    display: none;
+}
+div.carrito a {
+    color: black;
+}
+div.login a{
+    color: black;
+}
+nav.main-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* Estilo formulario */
+div.login-form {
+    z-index: 10;
+    opacity: 1;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+@media (min-width:740px){
+    div.menu-hamburquesa {
+        display: none;
+    }
+    section div.search-form {
+        width: 45%;
+    }
+    section div.search-form form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    section div.search-form form label {
+        width: 90%;
+    }
+    section div.search-form form label input{
+        background-color: #faf3dd;
+        border: 1px solid #7caa98;
+        outline: none;
+        color: #666;
+        padding: 2px;
+        width: 100%;
+        display: flex;
+    } 
+    section div.search-form form i {
+        background-color: white;
+        border: 0px;
+    }
+    nav.main-nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }}
