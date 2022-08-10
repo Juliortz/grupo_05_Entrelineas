@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/productDetailStyle.css">
+    <title>Anhelo</title>
+</head>
+<body>
+    <header>
+        <section class="top-bar">
+          <h3>Lugar para promociones</h3>
+        </section>
+        <section class="main-header">
+          <div class="menu-hamburquesa">
+            <i class="fa fa-bars burger"></i>
+          </div>
+          <div class="main-logo">
+            <img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas">
+          </div>
+          <div class="search-form">
+            <form method="get" action="#">
+              <label for="search-bar">
+              <input type="text" name="search-bar" id="search-bar" placeholder="Buscar libro, autor y más..." class="search-bar">
+              </label>
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        <div class="carrito">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div class="login">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <nav class="main-nav">
+          <a href="#">Temática</a>
+          <a href="#">Novedades</a>
+          <a href="#">Más vendidos</a>
+          <a href="#">Sagas</a>
+          <a href="#">Packs</a>
+        </nav>
+        </section>
+      </header>
+    <br></br>
+    <main>
+        <h2>¡Registrate y formá parte del Club Entrelíneas!</h2>
+        <br>
+        <div>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre"/>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido"/>
+            <br>
+            <label for="genero">Género:</label>
+            <input type="radio" name="genero" value="Masculino"/>Masculino
+            <input type="radio" name="genero" value="Femenino"/>Femenino
+            <input type="radio" name="genero" value="Ninguno de los anteriores"/>Ninguno de los anteriores
+            <br>
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" id="usuario"/>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"/>
+            <br>
+            <label for="sena">Contraseña:</label>
+            <input type="password" name="sena" id="sena"/>
+            <br>
+            <label for="country">País:</label>
+            <select name="country" id="country" >
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Perú">Perú</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+            <br>
+            <label for="genlit">Me interesa...</label>
+            <input type="checkbox" name="genlit" value="Fantasía">Fantasía
+            <input type="checkbox" name="genlit" value="Historia">Historia
+            <input type="checkbox" name="genlit" value="Ciencia ficción">Ciencia ficción
+            <input type="checkbox" name="genlit" value="Romance">Romance
+            <input type="checkbox" name="genlit" value="Política">Política
+            <input type="checkbox" name="genlit" value="Drama">Drama
+            <input type="checkbox" name="genlit" value="Policial">Policial
+            <input type="checkbox" name="genlit" value="Economía">Economía
+            <input type="checkbox" name="genlit" value="Terror">Terror
+            <input type="checkbox" name="genlit" value="Suspenso">Suspenso
+            <input type="checkbox" name="genlit" value="Autoayuda">Autoayuda
+        </div>
+        </form>
+    </main>
+    <footer>
+        <div class="conteiner">
+
+          <div class="footer-item">
+            <h5>Compras</h5>
+            <ul type="none">
+              <li><small>Búsqueda</small></li>
+              <li><small>Términos del Servicio</small></li>
+              <li><small>Política de Reembolso</small></li>
+            </ul>
+          </div>
+    
+          <div class="footer-item">
+            <h5>Atención al Cliente</h5>
+            <ul type="none">
+              <li><small>Contacto</small></li>
+              <li><small>Preguntas frecuentes</small></li>
+              <li><small>Medios de pago</small></li>
+            </ul>
+          </div>
+    
+          <div class="footer-item">
+            <h5>Entrelíneas</h5>
+            <ul type="none">
+              <li><small>Quiénes somos</small></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+</body>
