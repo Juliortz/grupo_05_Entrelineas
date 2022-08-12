@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/productDetailStyle.css">
+    <link rel="stylesheet" href="css/registerStyle.css">
     <title>Anhelo</title>
 </head>
 <body>
@@ -50,8 +50,8 @@
     <main>
         <h2>¡Registrate y formá parte del Club Entrelíneas!</h2>
         <br>
-        <div>
-        <form>
+        <div class="register-form">
+        <form action="#" method="post">
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" id="nombre"/>
             <br>
@@ -61,7 +61,7 @@
             <label for="genero">Género:</label>
             <input type="radio" name="genero" value="Masculino"/>Masculino
             <input type="radio" name="genero" value="Femenino"/>Femenino
-            <input type="radio" name="genero" value="Ninguno de los anteriores"/>Ninguno de los anteriores
+            <input type="radio" name="genero" value="Otro"/>Ninguno de los anteriores
             <br>
             <label for="usuario">Usuario:</label>
             <input type="text" name="usuario" id="usuario"/>
@@ -84,7 +84,7 @@
                 <option value="Venezuela">Venezuela</option>
             </select>
             <br>
-            <label for="genlit">Me interesa...</label>
+            <label for="genlit">Me interesa...</label><br/>
             <input type="checkbox" name="genlit" value="Fantasía">Fantasía
             <input type="checkbox" name="genlit" value="Historia">Historia
             <input type="checkbox" name="genlit" value="Ciencia ficción">Ciencia ficción
@@ -96,6 +96,8 @@
             <input type="checkbox" name="genlit" value="Terror">Terror
             <input type="checkbox" name="genlit" value="Suspenso">Suspenso
             <input type="checkbox" name="genlit" value="Autoayuda">Autoayuda
+            <button type="reset" value="enviar">Borrar</button>
+            <button type="submit" value="enviar">Enviar</button>
         </div>
         </form>
     </main>
