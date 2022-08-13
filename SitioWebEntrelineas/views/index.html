@@ -15,14 +15,19 @@
 
   <header>
     <section class="top-bar">
-      <h3>Lugar para promociones</h3>
+      <!-- Agrego esta div para hacer el efecto degradado del background -->
+      <div class="color-change-2x">
+      <h3>20% de descuento pagando en efectivo</h3>
+      </div>
     </section>
+
     <section class="main-header">
       <div class="menu-hamburquesa">
         <i class="fa fa-bars burger"></i>
       </div>
       <div class="main-logo">
-        <img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas">
+        <!-- a href al logo para volver a la página de inicio -->
+        <a href="/"><img src="/images/02-Logo-small.jpeg" alt="Logo de la Libreria Entrelineas"></a>
       </div>
       <div class="search-form">
         <form method="get" action="#">
@@ -39,22 +44,190 @@
       <a href="login"><i class="fas fa-user-circle"></i></a>
     </div>
     <nav class="main-nav">
+      <!-- Anclas a sectores de esta página -->
       <a href="#">Temática</a>
-      <a href="#">Novedades</a>
-      <a href="#">Más vendidos</a>
-      <a href="#">Sagas</a>
-      <a href="#">Packs</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#mas-vendidos">Más vendidos</a>
+      <a href="#sagas">Sagas</a>
+      <a href="#packs">Packs</a>
     </nav>
     </section>
-  </header>
+    <!-- Borde inferior del header con degradez de colores -->
+    <div class="color-change-2x">
+      <div class="color-border"></div>
+    </div>
 
+  </header>
+  <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
+  <div class="complete-conteiner">
   <main>
-    
-    <section class=".bg-pan-left">
+      <section class="product">
+      <h2 id="novedades">Novedades</h2>
+
+      <article class="product-box">
+        <div class="product-img"> 
+          <a href="productDetail"><img src="images/Libro-anhelo.webp" alt="Libro Anhelo"/></a>
+        </div>
+        <div class="product-title">
+          <h4>Anhelo</h4>
+          <span>$4300</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-Caballo-de-fuego-congo.webp" alt="Libro Caballo de fuego congo"/>
+        </div>
+        <div class="product-title">
+          <h4>Caballo de fuego CONGO</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-el-hechizo-del-agua.webp" alt="Libro El hechizo del agua"/>
+        </div>
+        <div class="product-title">
+          <h4>El hechizo del agua</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-el-peligro-de-estar-cuerda.webp" alt="Libro El peligro de estar cuerda"/>
+        </div>
+        <div class="product-title">
+          <h4>El peligro de estar cuerda</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-tu-y-yo-invencibles.webp" alt="Libro Tu y yo invencibles"/>
+        </div>
+        <div class="product-title">
+          <h4>Tú y yo invencibles</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
     </section>
 
     <section class="product">
-      <h3>Novedades</h3>
+      <h2 id="mas-vendidos">Más Vendidos</h2>
+
+      <article class="product-box">
+        <div class="product-img">
+          <a href="productDetail"><img src="images/Libro-anhelo.webp" alt="Libro Anhelo"/></a>
+        </div>
+        <div class="product-title">
+          <h4>Anhelo</h4>
+          <span>$4300</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-Caballo-de-fuego-congo.webp" alt="Libro Caballo de fuego congo"/>
+        </div>
+        <div class="product-title">
+          <h4>Caballo de fuego CONGO</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-el-hechizo-del-agua.webp" alt="Libro El hechizo del agua"/>
+        </div>
+        <div class="product-title">
+          <h4>El hechizo del agua</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-el-peligro-de-estar-cuerda.webp" alt="Libro El peligro de estar cuerda"/>
+        </div>
+        <div class="product-title">
+          <h4>El peligro de estar cuerda</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-tu-y-yo-invencibles.webp" alt="Libro Tu y yo invencibles"/>
+        </div>
+        <div class="product-title">
+          <h4>Tú y yo invencibles</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+    </section>
+
+    <section class="product">
+      <h2 id="sagas">Sagas</h2>
+
+      <article class="product-box">
+        <div class="product-img">
+          <a href="productDetail"><img src="images/Libro-anhelo.webp" alt="Libro Anhelo"/></a>
+        </div>
+        <div class="product-title">
+          <h4>Anhelo</h4>
+          <span>$4300</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-Caballo-de-fuego-congo.webp" alt="Libro Caballo de fuego congo"/>
+        </div>
+        <div class="product-title">
+          <h4>Caballo de fuego CONGO</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-el-hechizo-del-agua.webp" alt="Libro El hechizo del agua"/>
+        </div>
+        <div class="product-title">
+          <h4>El hechizo del agua</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-el-peligro-de-estar-cuerda.webp" alt="Libro El peligro de estar cuerda"/>
+        </div>
+        <div class="product-title">
+          <h4>El peligro de estar cuerda</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+      <article class="product-box">
+        <div class="product-img">
+          <img src="images\Libro-tu-y-yo-invencibles.webp" alt="Libro Tu y yo invencibles"/>
+        </div>
+        <div class="product-title">
+          <h4>Tú y yo invencibles</h4>
+          <span>$3000</span>
+        </div>            
+      </article>
+
+    </section>
+
+    <section class="product">
+      <h2 id="packs">Packs</h2>
 
       <article class="product-box">
         <div class="product-img">
@@ -141,5 +314,6 @@
     </div>
 
   </footer>
+  </div>
 </body>
 </html>
