@@ -156,6 +156,22 @@ footer div.conteiner div.footer-item ul {
 }
 
 @media (min-width:740px){
+    .product-img{
+        max-width: 250px;
+        width: 90%;
+    }
+    footer div.conteiner {
+        width: 100vw;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: flex-start;
+        background-color: #faf3dd;
+        padding: 10px;
+    } 
+}
+
+@media (min-width:980px){
     div.menu-hamburquesa {
         display: none;
     }
@@ -208,7 +224,7 @@ footer div.conteiner div.footer-item ul {
     }
     .product-img{
         max-width: 250px;
-        width: 60%;
+        width: 100%;
     }
     .description{
         width: 40%;
@@ -216,83 +232,15 @@ footer div.conteiner div.footer-item ul {
         flex-direction: column;
         padding: 20px;
     }
-    .button-contain{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-    }
-    .button{
-        display: flex;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px 10px;
-        width: 90%;
-        border-radius: 5px;
-        border-color: #769ECB;
-        color: white;
-        background-color: #9DBAD5;   
-        font-size: 15px;
-    }
-    
+   
     footer div.conteiner {
         width: 100vw;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         background-color: #faf3dd;
         padding: 10px;
-    }
-    
-}
-
-@media (min-width:980px){
-    .container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-    .product-image{
-        display: flex;
-        justify-content: flex-start;
-        margin: 10px;
-        width: 40%;
-    }
-    .description-sinopsis-list{
-        display: flex;
-        width: 50%;
-    }
-    .product-image img{
-        width: 100%;
-        height: 100%;
-        max-height: 800px;
-        max-width: 400px;
-    }
-    .product-tittle-price{
-        line-height: 25px;
-        padding: 10px;
-    }
-    .product-tittle-price span{
-        font-weight: bold;
-        font-size: 20px;
-    }
-    .button-contain{
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-        padding: 20px;
-    }
-    .button{
-        display: flex;
-        text-decoration: none;
-        font-weight: bold;
-        width: 70%;
-        border-radius: 5px;
-        border-color: #769ECB;
-        color: white;
-        background-color: #9DBAD5;   
-        font-size: 15px;
     }
 }
 
