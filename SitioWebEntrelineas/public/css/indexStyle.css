@@ -164,9 +164,10 @@ footer div.conteiner div.footer-item ul {
         border: 1px solid #7caa98;
         outline: none;
         color: #666;
-        padding: 2px;
+        padding: 3px;
         width: 100%;
-        display: flex;
+        display: block;
+        border-radius: 2px;
     } 
     section div.search-form form i {
         background-color: white;
