@@ -102,14 +102,19 @@ div.login-form form {
     background-color: #8fc1a9;
     padding: 15px;
     border-radius: 5px;
+    width: 90%;
+    max-width: 450px;
     box-shadow: 0 2px 4px 0 #818181;
 }
 div.login-form label, div.login-form input, div.login-form a, div.login-form button {
-    margin: 10px 0px;
+    margin: 5px 0px 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     border-radius: 5px;
     padding: 2px;  
+}
+div.login-form input {
+    width: 100%;
 }
 div.login-form button {
     width: 100%;

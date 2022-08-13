@@ -91,30 +91,35 @@ div.color-change-2x div.color-border {
 /* Estilo formulario */
 main h2{
     text-align: center;
+    padding: 0px 10px;
 }
 div.register-form {
     opacity: 1;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 5% 0px;
+    padding-bottom: 15px;
 }
 div.register-form form {
     background-color: #8fc1a9;
     padding: 15px;
     border-radius: 5px;
+    width: 90%;
     max-width: 450px;
     box-shadow: 0 2px 4px 0 #818181;
 }
 div.register-form label, div.register-form input, div.register-form a, div.register-form select, div.register-form button {
-    margin: 10px 0px;
+    margin: 5px 0px 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     border-radius: 5px;
     padding: 2px;  
 }
-div.register-form label {
-    font-weight: bold;
+div.register-form input, div.register-form select {
+    width: 100%;
+}
+div.radio input, div.check input {
+    width: 20px;
 }
 div.register-form button {
     width: 100%;
