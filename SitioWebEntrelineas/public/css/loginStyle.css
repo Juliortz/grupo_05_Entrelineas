@@ -116,6 +116,9 @@ div.login-form label, div.login-form input, div.login-form a, div.login-form but
 div.login-form input {
     width: 100%;
 }
+div.check input {
+    width: 20px;
+}
 div.login-form button {
     width: 100%;
     background-color: #faf3dd;
