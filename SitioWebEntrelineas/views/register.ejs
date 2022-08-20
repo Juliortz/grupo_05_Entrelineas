@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+    <br/>
+    <main>
+        <h2>¡Registrate y formá parte del Club Entrelíneas!</h2>
+        <br/>
+        <div class="register-form">
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label><br/>
+            <input type="text" name="nombre" id="nombre"/>
+            <br/>
+            <label for="apellido">Apellido:</label><br/>
+            <input type="text" name="apellido" id="apellido"/>
+            <br/>
+            <div class="radio">
+              <p>Género:</p><br/>
+              <label for="masc"><input type="radio" name="genero" value="Masculino" id="masc"/>Masculino</label><br/>
+              <label for="fem"><input type="radio" name="genero" value="Femenino" id="fem"/>Femenino</label><br/>
+              <label for="otro"><input type="radio" name="genero" value="Otro" id="otro"/>Ninguno de los anteriores</label>
+            </div>
+            <br>
+            <label for="usuario">Usuario:</label><br/>
+            <input type="text" name="usuario" id="usuario"/>
+            <br>
+            <label for="email">Email:</label><br/>
+            <input type="email" name="email" id="email"/>
+            <br>
+            <label for="sena">Contraseña:</label><br/>
+            <input type="password" name="sena" id="sena"/>
+            <br>
+            <label for="country">País:</label>
+            <select name="country" id="country" >
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Perú">Perú</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+            <br>
+            <div class="check">
+            <p>Me interesa...<p>
+              <label for="fant"><input type="checkbox" name="genlit" value="Fantasía" id="fant">Fantasía</label><br/>
+              <label for="hist"><input type="checkbox" name="genlit" value="Historia" id="hist">Historia</label><br/>
+              <label for="cien"><input type="checkbox" name="genlit" value="Ciencia ficción" id="cien">Ciencia ficción</label><br/>
+              <label for="roma"><input type="checkbox" name="genlit" value="Romance" id="roma">Romance</label><br/>
+              <label for="polit"><input type="checkbox" name="genlit" value="Política" id="polit">Política</label><br/>
+              <label for="dram"><input type="checkbox" name="genlit" value="Drama" id="dram">Drama</label><br/>
+              <label for="polic"><input type="checkbox" name="genlit" value="Policial" id="polic">Policial</label><br/>
+              <label for="econ"><input type="checkbox" name="genlit" value="Economía" id="econ">Economía</label><br/>
+              <label for="terr"><input type="checkbox" name="genlit" value="Terror" id="terr">Terror</label><br/>
+              <label for="susp"><input type="checkbox" name="genlit" value="Suspenso" id="susp">Suspenso</label><br/>
+              <label for="auto"><input type="checkbox" name="genlit" value="Autoayuda" id="auto">Autoayuda</label><br/>
+            </div>
+            <button type="reset" value="enviar">Borrar</button>
+            <button type="submit" value="enviar">Enviar</button>
+        </div>
+        </form>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
