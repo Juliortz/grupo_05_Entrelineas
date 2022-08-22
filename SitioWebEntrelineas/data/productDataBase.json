@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "titulo": "Anhelo",
+        "autor": "Tracy Wolf",
+        "sinopsis": "Mi mundo cambió en el instante en el que pisé el instituto Katmere. Aquí todo resulta extraño: la escuela, los alumnos, las asignaturas, y yo no soy más que una simple mortal entre ellos, dioses... o monstruos. Todavía no sé a qué bando pertenezco, si es que pertenezco a alguno, sólo sé que lo que parece unirlos a todos es su odio hacia mí. Pero entre ellos está Jaxon Vega, un vampiro que esconde oscuros secretos y que no ha sentido nada durante un siglo. Algo en él me atrae, apenas lo conozco, pero sé que hay algo roto en su interior que de alguna manera encaja con lo que hay roto en mí. Acercarme a él puede significar el fin del mundo, pero empiezo a sospechar que alguien me ha traído a este lugar a propósito, y tengo que descubrir por qué.",
+        "fechaPublicacion": "01/03/2022",
+        "paginas": 672,
+        "idioma": "español",
+        "precio": "4300",
+        "img": "Libro-anhelo.webp",
+        "novedades": true,
+        "masVendidos": false,
+        "sagas": false,
+        "packs": false
+    },
+    {
+        "id":2,
+        "titulo": "",
+        "autor": "",
+        "sinopsis": "",
+        "fechaPublicacion": "",
+        "paginas": "",
+        "idioma": "",
+        "precio": "",
+        "img": "",
+        "novedades": "",
+        "masVendidos": "",
+        "sagas": "",
+        "packs": ""
+    }
+]
