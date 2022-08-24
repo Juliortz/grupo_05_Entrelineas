@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+<%- include('./partials/head') %>
 <body>
-  <%- include('../partials/header') %>
+  <%- include('./partials/header') %>
   <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
   <div class="complete-conteiner">
   <main>
@@ -10,16 +10,16 @@
       <h2 id="novedades">Novedades</h2>
 
         <% for (const product of products){ %>
-          <%- include('../partials/productItem', {product}) %>
+          <%- include('./partials/product-item', {product}) %>
 
         <% } %>
 
     <section class="product">
       <h2 id="mas-vendidos">Más Vendidos</h2>
-
-      <article class="product-box">
+      
+      <!-- <article class="product-box">
         <div class="product-img">
-          <a href="productDetail"><img src="images/Libro-anhelo.webp" alt="Libro Anhelo"/></a>
+          <a href="product-detail"><img src="images/Libro-anhelo.webp" alt="Libro Anhelo"/></a>
         </div>
         <div class="product-title">
           <h4>Anhelo</h4>
@@ -65,9 +65,9 @@
           <h4>Tú y yo invencibles</h4>
           <span>$3000</span>
         </div>            
-      </article> -->
+      </article> 
 
-    </section>
+    </section> -->
 
     <section class="product">
       <h2 id="sagas">Sagas</h2>
@@ -181,7 +181,7 @@
 
   </main>
 
-  <%- include('../partials/footer') %>
+  <%- include('./partials/footer') %>
   </div>
 </body>
 </html>

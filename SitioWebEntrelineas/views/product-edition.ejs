@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/registerStyle.css">
+    <title>Registrarse</title>
+</head>
 <body>
   <%- include('./partials/header') %>
     <br/>
     <main>
-        <h2>¡Registrate y formá parte del Club Entrelíneas!</h2>
+        <h2>Editar Producto</h2>
         <br/>
         <div class="register-form">
-        <form action="#" method="post">
+        <form action="products/product/:id/editar?_method=PUT" method="post">
             <label for="nombre">Nombre:</label><br/>
             <input type="text" name="nombre" id="nombre"/>
             <br/>
@@ -57,8 +67,8 @@
               <label for="susp"><input type="checkbox" name="genlit" value="Suspenso" id="susp">Suspenso</label><br/>
               <label for="auto"><input type="checkbox" name="genlit" value="Autoayuda" id="auto">Autoayuda</label><br/>
             </div>
-            <button type="reset" value="enviar">Borrar</button>
-            <button type="submit" value="enviar">Enviar</button>
+            <button type="reset" value="borrar">Borrar</button>
+            <button type="submit" value="registrarse">Registrarse</button>
         </div>
         </form>
     </main>

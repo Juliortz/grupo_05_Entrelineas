@@ -6,7 +6,10 @@ const productController = {
     detail: (req, res)=> {
     let productRequire = req.params.id;
     let productDetail = products.find((product)=>product.id == productRequire);
-    res.render('productDetail', {productDetail});
+    res.render('product-detail', {productDetail});
+    },
+    cart: (req, res)=> {
+        res.render('product-cart', {products});
     }
 };
 
