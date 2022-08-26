@@ -7,12 +7,12 @@ const userRouter = require('./routes/user-router');
 const methodOverride = require('method-override');
 
 app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, './public')));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
-
-app.use(express.static('public'));
-
 
 app.use('/', indexRouter);
 app.use('/users', userRouter);
