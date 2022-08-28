@@ -10,6 +10,11 @@ const productController = {
     },
     cart: (req, res)=> {
         res.render('product-cart', {products});
+    },
+    editar: (req, res)=> {
+        let idProduct = req.params.id;
+        let productEdit = products.find((product)=> product.id == idProduct);
+        res.send('formulario edición');
     }
 };
 
