@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/loginStyle.css">
+    <title>Login</title>
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <br/>
+    <main>
+        <h2>EDITAR PRODUCTO</h2>
+        <br/>
+        <div>
+            <form>
+                <label for="nombreProducto">Nombre del producto:</label>
+                <input type="text" name="nombreProducto" id="nombreProducto"/>
+                <br/>
+                <label for="sinopsis">Sinopsis:</label>
+                <textarea type="text" name="sinopsis" id="sinopsis">Resumen del libro...</textarea>
+                <br/>
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" id="precio"/>
+                <br/>
+                <label for="imagenProducto">Imagen del producto:</label>
+                <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg">
+                <br/>
+                <h3>Ficha técnica:</h3>
+                <br/>
+                <label for="edicion">Edición:</label>
+                <input type="number" name="edicion" id="edicion"/>
+                <br/>
+                <label for="paginas">Páginas:</label>
+                <input type="number" name="paginas" id="paginas"/>
+                <br/>
+                <label for="idioma">Idioma:</label>
+                <input type="text" name="idioma" id="idioma"/>
+                <br/>
+                <label for="presentacion">Presentación:</label>
+                <input type="text" name="presentacion" id="presentacion"/>
+                <br/>
+            </form>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
