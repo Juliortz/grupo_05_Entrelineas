@@ -27,3 +27,28 @@ HACER MENOS:
 DEJAR DE HACER: 
 
 •Recurrir a excusas y evadir la responsabilidad del trabajo. Se trata de ser honestos no solo con el equipo, sino también con uno mismo. Si la tarea asignada no puede ser realizada en la forma y el tiempo correspondientes, ya sea por falta de tiempo o porque el encargado de hacerla no cuente con los conocimientos o habilidades necesarias para ello, o porque simplemente, no quiera hacerlo, esto debe comunicarse al resto del equipo de forma honesta y oportuna, para en conjunto tomar la que se considere la mejor decisión. 
+
+
+ACTUALIZACIÓN
+
+SEGUIR HACIENDO: 
+
+•Las reuniones periódicas entre los miembros del grupo han demostrado ser efectivas para el intercambio de ideas, opiniones y conocimientos, además de que facilitan la planificación, organización y seguimiento del desarrollo de cada sprint. 
+
+•A pesar de los imprevistos ocurridos en el grupo, con la salida de uno de los miembros, la distribución de las tareas a realizar de forma equitativa y tomando en cuenta las capacidades de cada miembro del equipo, nos ha permitido cumplir los objetivos planteados de cada sprint, satisfactoriamente y sin contratiempos.
+
+HACER MÁS:
+
+•Fortalecer lazos de confianza. Somos menos y eso se siente a la hora de distribuir las responsabilidades en cada uno de los miembros, pero el hecho también nos ha permitido conocernos más y establecer fácilmente un equipo de trabajo agradable, respetuoso y productivo. 
+
+EMPEZAR A HACER:
+
+•Autoevaluaciones. Reconocer carencias personales, compartir los tópicos en los que se tienen dificultades con el resto del equipo y tratar de solucionarlos en conjunto.  
+
+HACER MENOS:
+
+•No priorizar el cumplimiento de los objetivos planteados, recurriendo a excusas con tal de evadir responsabilidades o desperdiciar tiempo u otros recursos en acciones que para el momento, se encuentran fuera del plan de trabajo. 
+
+DEJAR DE HACER:
+
+•No ser honestos con el resto del equipo. Si no se cuenta con la disposición o el enfoque de cumplir con los objetivos exigidos, ya sea por cuestiones de tiempo, desmotivación o situaciones ajenas a la voluntad, esto debe comunicarse oportunamente, con el fin de evitar molestias y no afectar el desempeño general del equipo. 
