@@ -71,6 +71,12 @@ section div.search-form form button {
 nav.main-nav {
     display: none;
 }
+div.carrito a {
+    color: black;
+}
+div.login a{
+    color: black;
+}
 
 nav.main-nav a{
     text-decoration: none;
@@ -103,15 +109,12 @@ div.complete-conteiner {
 
 .button-contain{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
     padding: 20px;
 }
 
-.button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+a input.button{
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -238,24 +241,13 @@ footer div.conteiner div.footer-item ul {
         line-height: 25px;
         padding: 10px;
     }
-    .button-contain{
+    /* .button-contain{
         display: flex;
         align-items: center;
         flex-direction: column;
         padding: 20px;
-    }
-    .button{
-        display: flex;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px 10px;
-        width: 50%;
-        border-radius: 5px;
-        border-color: #769ECB;
-        color: white;
-        background-color: #9DBAD5;   
-        font-size: 15px;
-    }
+    } */
+    
 }
 @media (min-width:980px){
     .container{
@@ -288,21 +280,10 @@ footer div.conteiner div.footer-item ul {
         font-size: 20px;
     }
     .button-contain{
-        display: flex;
-        justify-content: flex-end;
         flex-direction: row;
-        padding: 20px;
     }
-    .button{
-        display: flex;
-        text-decoration: none;
-        font-weight: bold;
-        width: 70%;
-        border-radius: 5px;
-        border-color: #769ECB;
-        color: white;
-        background-color: #9DBAD5;   
-        font-size: 15px;
+    a input.button{
+        margin: 5px;
     }
     /* para alinear footer */
     footer div.conteiner {
