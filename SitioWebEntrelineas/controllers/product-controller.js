@@ -15,6 +15,9 @@ const productController = {
         let idProduct = req.params.id;
         let productEdit = products.find((product)=> product.id == idProduct);
         res.render('product-edition', {productEdit});
+    },
+    add: (req, res)=>{
+        res.render('product-add');
     }
 };
 
