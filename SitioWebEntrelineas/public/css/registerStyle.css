@@ -108,14 +108,14 @@ div.register-form form {
     max-width: 450px;
     box-shadow: 0 2px 4px 0 #818181;
 }
-div.register-form label, div.register-form input, div.register-form a, div.register-form select, div.register-form button {
+div.register-form label, div.register-form input, div.register-form a, div.register-form select, div.register-form button, div.register-form textarea {
     margin: 5px 0px 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     border-radius: 5px;
     padding: 2px;  
 }
-div.register-form input, div.register-form select {
+div.register-form input, div.register-form select, div.register-form textarea {
     width: 100%;
 }
 div.radio input, div.check input {

@@ -14,7 +14,10 @@ const productController = {
     editar: (req, res)=> {
         let idProduct = req.params.id;
         let productEdit = products.find((product)=> product.id == idProduct);
-        res.send('formulario edición');
+        res.render('product-edition', {productEdit});
+    },
+    add: (req, res)=>{
+        res.render('product-add');
     }
 };
 
