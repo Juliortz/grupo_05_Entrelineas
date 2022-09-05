@@ -121,6 +121,9 @@ div.register-form input, div.register-form select, div.register-form textarea {
 div.radio input, div.check input {
     width: 20px;
 }
+div.checkbox-box input{
+    width: auto;
+}
 div.register-form button {
     width: 100%;
     background-color: #faf3dd;

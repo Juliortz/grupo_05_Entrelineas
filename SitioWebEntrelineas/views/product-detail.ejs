@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="stylesheet" href="/css/productDetailStyle.css">
-        <title>Yo robot</title>
+        <title><%= productDetail.titulo %></title>
     </head>
 <body>
     <header>
@@ -61,42 +61,55 @@
     <main>
       <div class="container">
         <div class="product-image">
-            <img src="/images/products/yo-robot.jpg" alt="Libro yo, robot"/>
+            <img src="/images/products/<%= productDetail.img %>" alt="Libro yo, robot"/>
         </div>
         <section class="description-sinopsis-list">
             <div class="product-tittle-price">
-            <h1>Yo, robot</h1>
-            <h3>Isaac Asimov</h3>
-            <span>$2.149,00</span>
+            <h1><%= productDetail.titulo %></h1>
+            <h3><%= productDetail.autor %></h3>
+            <span>$ <%= productDetail.precio %></span>
             </div>
             <br/>
             <div class="button-contain">
-            <a href="#">
-                <input type="submit" name="button" value="Agregar al carrito" class="button">
-            </a>
-            <br/>
-            <a href="#">
-                <input type="submit" name="button" value="Comprar ahora" class="button">
-            </a>
-            <br/>
-            <a href="../edition/14">
-                <input type="submit" name="button" value="Editar" class="button">
-            </a>
+              <form action="#" method="GET">
+            
+                <button type="submit" name="button" value="add" class="button">Agregar al carrito</button>
+            
+            </form>
+            
+            <form action="#" method="GET">
+            
+              <button type="submit" name="button" value="buy" class="button">Comprar ahora</button>
+          
+          </form>
+           
+            <form action="../edit/<%= productDetail.id %>" method="GET">
+            
+                <button type="submit" name="button" value="Editar" class="button">Editar</button>
+            
+            </form>
+            
+            <form action="../delete/<%= productDetail.id %>?_method=DELETE" method="POST">
+            
+                <button type="submit" name="button" value="Eliminar" class="button">Eliminar</button>
+            
+            </form>
             </div>
             <br/>
             <div class="sinopsis">
             <h4>Sinopsis</h4>
-            <p>La vida de la robotpsicóloga Susan Calvin acompaña los avances de la industria robótica desde sus primeros intentos -los rudimentarios robots áfonos y los autómatas obreros- hasta sus logros más sofisticados: las máquinas que auxilian al hombre en el gobierno planetario. Desfila, a lo largo de estas páginas, un elenco singular de robots sorprendentemente humanos, quienes ajustan su conducta a las tres leyes de la robótica concebidas por Asimov. Estas normas, sin embargo, desencadenan múltiples conflictos. Así, encontramos a Cutie, el robot que desconoce la autoridad humana y venera al transformador de energía; o a Dave, guiando a sus subsidiarios en una siniestra marcha; o a Herbie, el robot telépata, más aficionado a las novelas sentimentales que a las matemáticas. Yo, Robot incita a reflexionar acerca de la condición humana en un mundo cada día más tecnologizado. ¿Llegará la máquina a sustituir al hombre? ¿Es posible perder el control sobre el producto creado? ¿Existe un límite para la aplicación racional de la robótica? Éstas son sólo algunas de las inquietantes preguntas que la novela plantea.</p>
+            <br/>
+            <p><%= productDetail.sinopsis %></p>
             </div>
             <br></br>
             <div class="ficha">
             <h4>Ficha técnica</h4>
-            <ul type="none">
-                <li>Edición: 2016</li>
-                <li>Páginas: 256</li>
-                <li>Idioma: Español</li>
-                <li>Presentación: De bolsillo</li>
-            </ul>
+              <ul type="none">
+                <li>Edición: <%= productDetail.edicion %></li>
+                <li>Páginas: <%= productDetail.paginas %></li>
+                <li>Idioma: <%= productDetail.idioma %></li>
+                <li>Presentación: <%= productDetail.presentacion %></li>
+              </ul>
             </div>
         </section>
         </div>

@@ -70,22 +70,33 @@ const productController = {
     },
 
     update: (req, res)=>{
-        //Esta función lleva la lógica de edición del producto 
-        // y redirecciona a la vista de detalle del producto
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        products.forEach((p) => {
+            if(p.id == req.params.id){
+                p.titulo = req.body.titulo;
+                p.autor = req.body.autor;
+                p.sinopsis = req.body.sinopsis;
+                p.edicion = req.body.edicion;
+                p.paginas = req.body.paginas;
+                p.idioma = req.body.idioma;
+                p.precio = req.body.precio;
+                p.presentacion = req.body.presentacion;
+                p.novedades = req.body.novedades;
+                p.masVendidos = req.body.masVendidos;
+                p.sagas = req.body.sagas;
+                p.packs = req.body.packs;
+            
+                if(req.file && req.file != 'default-image.jpg'){
+                    fs.unlinkSync("./public/images/products/" + p.img);
+                    p.img = req.file.filename;
+                };
+            };
+        });
+        const data = JSON.stringify(products, null, " ");
+        fs.writeFileSync(productsFilePath, data);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+        res.redirect("/products/detail/" + req.params.id);
 
     },
 

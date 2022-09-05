@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/css/registerStyle.css">
-    <title>Registrarse</title>
+    <title>Editar producto</title>
 </head>
 <body>
   <header>
@@ -63,33 +63,44 @@
         <h2>EDITAR PRODUCTO</h2>
         <br/>
         <div class="register-form">
-            <form action="#" method="post">
+            <form action="../edit/:id?_method=PUT" method="POST" enctype="multipart/form-data">
                 <label for="nombreProducto">Nombre del producto:</label>
-                <input type="text" name="nombreProducto" id="nombreProducto"/>
+                <input type="text" name="nombreProducto" id="nombreProducto" value="<%= productEdit.titulo %>"/>
                 <br/>
                 <label for="sinopsis">Sinopsis:</label><br/>
-                <textarea type="text" name="sinopsis" id="sinopsis">Resumen del libro...</textarea>
+                <textarea type="text" name="sinopsis" id="sinopsis"><%= productEdit.sinopsis %></textarea>
                 <br/>
                 <label for="precio">Precio:</label>
-                <input type="number" name="precio" id="precio"/>
+                <input type="number" name="precio" id="precio" value="<%= productEdit.precio %>"/>
                 <br/>
                 <label for="imagenProducto">Imagen del producto:</label>
-                <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg">
+                <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg" >
                 <br/>
                 <h3>Ficha técnica:</h3>
                 <br/>
                 <label for="edicion">Edición:</label>
-                <input type="number" name="edicion" id="edicion"/>
+                <input type="number" name="edicion" id="edicion" value="<%= productEdit.edicion %>"/>
                 <br/>
                 <label for="paginas">Páginas:</label>
-                <input type="number" name="paginas" id="paginas"/>
+                <input type="number" name="paginas" id="paginas" value="<%= productEdit.paginas %>"/>
                 <br/>
                 <label for="idioma">Idioma:</label>
-                <input type="text" name="idioma" id="idioma"/>
+                <input type="text" name="idioma" id="idioma" value="<%= productEdit.idioma %>"/>
                 <br/>
                 <label for="presentacion">Presentación:</label>
-                <input type="text" name="presentacion" id="presentacion"/>
+                <input type="text" name="presentacion" id="presentacion" value="<%= productEdit.presentacion %>"/>
                 <br/>
+
+              <div class="checkbox-box">
+                <label for="novedades">Novedades</label>
+                <input type="checkbox" name="categoria" value="novedades" id="novedades" <%= productEdit.novedades?'checked':''%>>
+                <label for="masVendidos">| Más Vendidos</label>
+                <input type="checkbox" name="categoria" value="masVendidos" id="masVendidos" <%= productEdit.masVendidos?'checked':''%>>
+                <label for="sagas">| Sagas</label>
+                <input type="checkbox" name="categoria" value="sagas" id="sagas" <%= productEdit.sagas?'checked':''%>>
+                <label for="packs">| Packs</label>
+                <input type="checkbox" name="categoria" value="packs" id="packs" <%= productEdit.packs?'checked':''%>>
+              </div>
                 <button type="submit" value="save">Guardar cambios</button>
             </form>
         </div>

@@ -114,7 +114,7 @@ div.complete-conteiner {
     padding: 20px;
 }
 
-a input.button{
+button.button{
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -124,6 +124,7 @@ a input.button{
     color: white;
     background-color: #9DBAD5;   
     font-size: 15px;
+    margin: 5px;
 }
 
 .product-tittle-price{
@@ -137,10 +138,13 @@ a input.button{
 
 .sinopsis{
     margin: 10px;
+    padding: 10px;
+    text-align: justify;
 }
 
 .ficha{
     margin: 10px;
+    padding: 10px;
 }
 
 .puedeInteresarte{

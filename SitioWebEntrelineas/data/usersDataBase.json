@@ -1,15 +1,107 @@
-[{"id":1,"first_name":"Miller","last_name":"Cabell","email":"mcabell0@elpais.com","gender":"Male"},
-{"id":2,"first_name":"Siouxie","last_name":"Campe","email":"scampe1@uol.com.br","gender":"Female"},
-{"id":3,"first_name":"Josey","last_name":"Litterick","email":"jlitterick2@tripadvisor.com","gender":"Female"},
-{"id":4,"first_name":"Herby","last_name":"Kester","email":"hkester3@over-blog.com","gender":"Male"},
-{"id":5,"first_name":"Pavel","last_name":"Horlock","email":"phorlock4@wikia.com","gender":"Male"},
-{"id":6,"first_name":"Hilde","last_name":"Sadgrove","email":"hsadgrove5@vimeo.com","gender":"Female"},
-{"id":7,"first_name":"Kearney","last_name":"Malimoe","email":"kmalimoe6@privacy.gov.au","gender":"Male"},
-{"id":8,"first_name":"Glyn","last_name":"Oganian","email":"goganian7@columbia.edu","gender":"Female"},
-{"id":9,"first_name":"Alec","last_name":"Korbmaker","email":"akorbmaker8@devhub.com","gender":"Male"},
-{"id":10,"first_name":"Nonnah","last_name":"Aupol","email":"naupol9@is.gd","gender":"Female"},
-{"id":11,"first_name":"Nissie","last_name":"Espin","email":"nespina@free.fr","gender":"Female"},
-{"id":12,"first_name":"Ariana","last_name":"Matthews","email":"amatthewsb@amazon.co.uk","gender":"Female"},
-{"id":13,"first_name":"Henrik","last_name":"Dongles","email":"hdonglesc@google.com","gender":"Male"},
-{"id":14,"first_name":"Chicky","last_name":"Cool","email":"ccoold@vistaprint.com","gender":"Female"},
-{"id":15,"first_name":"Dalila","last_name":"Gruszka","email":"dgruszkae@tamu.edu","gender":"Bigender"}]
+[
+    {
+        "id": 1,
+        "first_name": "Miller",
+        "last_name": "Cabell",
+        "email": "mcabell0@elpais.com",
+        "gender": "Male"
+    },
+    {
+        "id": 2,
+        "first_name": "Siouxie",
+        "last_name": "Campe",
+        "email": "scampe1@uol.com.br",
+        "gender": "Female"
+    },
+    {
+        "id": 3,
+        "first_name": "Josey",
+        "last_name": "Litterick",
+        "email": "jlitterick2@tripadvisor.com",
+        "gender": "Female"
+    },
+    {
+        "id": 4,
+        "first_name": "Herby",
+        "last_name": "Kester",
+        "email": "hkester3@over-blog.com",
+        "gender": "Male"
+    },
+    {
+        "id": 5,
+        "first_name": "Pavel",
+        "last_name": "Horlock",
+        "email": "phorlock4@wikia.com",
+        "gender": "Male"
+    },
+    {
+        "id": 6,
+        "first_name": "Hilde",
+        "last_name": "Sadgrove",
+        "email": "hsadgrove5@vimeo.com",
+        "gender": "Female"
+    },
+    {
+        "id": 7,
+        "first_name": "Kearney",
+        "last_name": "Malimoe",
+        "email": "kmalimoe6@privacy.gov.au",
+        "gender": "Male"
+    },
+    {
+        "id": 8,
+        "first_name": "Glyn",
+        "last_name": "Oganian",
+        "email": "goganian7@columbia.edu",
+        "gender": "Female"
+    },
+    {
+        "id": 9,
+        "first_name": "Alec",
+        "last_name": "Korbmaker",
+        "email": "akorbmaker8@devhub.com",
+        "gender": "Male"
+    },
+    {
+        "id": 10,
+        "first_name": "Nonnah",
+        "last_name": "Aupol",
+        "email": "naupol9@is.gd",
+        "gender": "Female"
+    },
+    {
+        "id": 11,
+        "first_name": "Nissie",
+        "last_name": "Espin",
+        "email": "nespina@free.fr",
+        "gender": "Female"
+    },
+    {
+        "id": 12,
+        "first_name": "Ariana",
+        "last_name": "Matthews",
+        "email": "amatthewsb@amazon.co.uk",
+        "gender": "Female"
+    },
+    {
+        "id": 13,
+        "first_name": "Henrik",
+        "last_name": "Dongles",
+        "email": "hdonglesc@google.com",
+        "gender": "Male"
+    },
+    {
+        "id": 14,
+        "first_name": "Chicky",
+        "last_name": "Cool",
+        "email": "ccoold@vistaprint.com",
+        "gender": "Female"
+    },
+    {
+        "id": 15,
+        "first_name": "Dalila",
+        "last_name": "Gruszka",
+        "email": "dgruszkae@tamu.edu",
+        "gender": "Bigender"
+    }
+]
