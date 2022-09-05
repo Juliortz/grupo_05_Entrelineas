@@ -6,7 +6,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const controller = {
     index: (req, res)=> {
-        
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let productsNovedades = products.filter(p => p.novedades == true)
 		let productsMasVendidos = products.filter(p => p.masVendidos == true)
         let productsSagas = products.filter(p => p.sagas == true)

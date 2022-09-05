@@ -23,7 +23,7 @@ const productController = {
     },
 
     detail: (req, res)=> {
-    
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let productDetail = products.find((product)=>product.id == req.params.id);
     res.render('product-detail', {productDetail});
     },
@@ -63,7 +63,7 @@ const productController = {
 
 
     edit: (req, res)=> {
-        //Esta función solo lleva al formulario de edición del producto
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let idProduct = req.params.id;
         let productEdit = products.find((product)=> product.id == idProduct);
         res.render('product-edition', {productEdit});
@@ -71,6 +71,7 @@ const productController = {
 
     update: (req, res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        
         products.forEach((p) => {
             if(p.id == req.params.id){
                 p.titulo = req.body.titulo;
@@ -81,10 +82,11 @@ const productController = {
                 p.idioma = req.body.idioma;
                 p.precio = req.body.precio;
                 p.presentacion = req.body.presentacion;
-                p.novedades = req.body.novedades;
-                p.masVendidos = req.body.masVendidos;
-                p.sagas = req.body.sagas;
-                p.packs = req.body.packs;
+
+                req.body.novedades?p.novedades=true : p.novedades=false;
+                req.body.masVendidos?p.masVendidos = true: p.masVendidos = false;
+                req.body.sagas?p.sagas = true : p.sagas = false;
+                req.body.packs? p.packs = true : p.packs = false;
             
                 if(req.file && req.file != 'default-image.jpg'){
                     fs.unlinkSync("./public/images/products/" + p.img);
