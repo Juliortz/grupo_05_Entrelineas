@@ -101,8 +101,6 @@ const productController = {
         res.redirect("/products/detail/" + req.params.id);
 
     },
-
-
     
     create: (req, res)=>{
         //Esta función solo lleva al formulario de creación del producto
@@ -110,24 +108,34 @@ const productController = {
     },
 
     store: (req, res)=>{
-        //Aquí va la lógica de creación del producto
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"))
+        
+        const newProduct = {
+            id: Date.now(),
+            titulo: req.body.titulo,
+            autor: req.body.autor,
+            sinopsis: req.body.sinopsis,
+            edicion: req.body.edicion,
+            paginas: req.body.paginas,
+            idioma: req.body.idioma,
+            precio: req.body.precio,
+            presentacion: req.body.presentacion,
+            novedades: req.body.novedades?novedades=true : novedades=false,
+            masVendidos: req.body.masVendidos?masVendidos = true: masVendidos = false,
+            sagas: req.body.sagas?sagas = true : sagas = false,
+            packs: req.body.packs?packs = true : packs = false,
+            img: "default-image.jpg",
+            };
 
+            if(req.file) {
+                newProduct.img = req.file.filename;
+            }
 
+        products.push(newProduct);
+        const data = JSON.stringify(products, null, " ");
+        fs.writeFileSync(productsFilePath, data);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        res.redirect('/')
     },
 
     destroy: (req, res) => {

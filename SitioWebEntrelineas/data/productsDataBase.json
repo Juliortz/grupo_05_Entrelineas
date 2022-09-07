@@ -398,5 +398,21 @@
   "masVendidos": false,
   "sagas": false,
   "packs": false
+ },
+ {
+  "id": 1662577389285,
+  "titulo": "Fuego y sangre",
+  "autor": "George Martin",
+  "sinopsis": "Siglos antes de que tuvieran lugar los acontecimientos que se relatan en «Canción de hielo y fuego», la casa Targaryen, la única dinastía de señores dragón que sobrevivió a la Maldición de Valyria, se asentó en la isla de Rocadragón. Este es el primero de dos volúmenes, donde el autor de Juego de tronos nos cuenta, con todo lujo de detalles, la historia de tan fascinante familia, empezando por Aegon I Targaryen, creador del icónico Trono de Hierro, y seguido por el resto de las generaciones de Targaryen que lucharon enconadamente por conservar el poder y el trono, hasta la llegada de la guerra civil que estuvo a punto de acabar con ellos. ¿Qué pasó realmente durante la Danza de los Dragones? ¿Por qué era tan peligroso acercarse a Valyria después de la Maldición? ¿Cómo era Poniente cuando los dragones dominaban los cielos? Estas, y otras muchas, son las preguntas a las que responde esta monumental crónica, narrada por un erudito maestre de la Ciudadela, que anticipa el ya conocido universo de George R. R. Martin. Fuego y Sangre brindará a los lectores la oportunidad de tener otra visión de la portentosa y sangrienta historia de Poniente. Esta obra, magníficamente ilustrada con ochenta láminas inéditas de Doug Wheatley, se convertirá, sin duda, en una lectura ineludible para todos los fans de la aclamada serie.",
+  "edicion": "2018",
+  "paginas": "880",
+  "idioma": "Español",
+  "precio": "7349",
+  "presentacion": "Rústica",
+  "novedades": false,
+  "masVendidos": true,
+  "sagas": true,
+  "packs": false,
+  "img": "1662577389283fuego-y-sangre.jpg"
  }
 ]

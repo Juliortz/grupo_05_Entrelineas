@@ -21,7 +21,7 @@ const productController = require('../controllers/product-controller');
 router.get('/', productController.list);
 
 router.get('/create', productController.create);
-router.post('/create', productController.store);
+router.post('/create', upload.single('imagenProducto'), productController.store);
 
 router.get('/detail/:id', productController.detail);
 
