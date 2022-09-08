@@ -14,7 +14,9 @@ const productController = {
 //  todos los productos y renderizar la vista
 //  'products' que hay que hacerla y utilizar la vista partials/product-item, 
 //  en general es similar al index.ejs pero no están divididos en novedades, sagas, etc
+const product = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
+res.render("products", {product})
 
 
 
