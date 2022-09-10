@@ -142,27 +142,23 @@ res.render("products", {product})
 
     destroy: (req, res) => {
         //lógica para borrar producto y redireccionar al listado de productos
+        let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        const producto = products.find((p) => p.id == req.params.id);
+       
 
 
+        if (producto) {
+            fs.unlinkSync("./public/images/products/" + producto.img);
+            console.log("Producto deleted successfull");
+        }
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        let indice = products.indexOf(producto);
+        console.log(indice);
+        products = products.splice(0, indice);
+        const data = JSON.stringify(products, null, " ");
+        fs.writeFileSync(productsFilePath, data);
+        res.redirect("/products");
     },
 
 
