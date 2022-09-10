@@ -6,8 +6,8 @@
   <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
   <div class="complete-conteiner">
   <main>
-      <h2>Listado de Productos</h2>
       <section class="product">
+        <h2>Listado de Productos</h2>
         <% product.forEach(product => { %> 
         <%- include('./partials/product-item', {product})%>
         <% } )%> 
