@@ -16,7 +16,7 @@ const productController = {
 //  en general es similar al index.ejs pero no están divididos en novedades, sagas, etc
 const product = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-res.render("products", {product})
+res.render("products/products", {product})
 
 
 
@@ -27,13 +27,13 @@ res.render("products", {product})
     detail: (req, res)=> {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let productDetail = products.find((product)=>product.id == req.params.id);
-    res.render('product-detail', {productDetail});
+    res.render('products/product-detail', {productDetail});
     },
 
 
     cart: (req, res)=> {
         //este controlador nos lleva carrito que también tenemos que hacer la vista dinámica
-        res.render('product-cart');
+        res.render('products/product-cart');
     },
 
     
@@ -68,7 +68,7 @@ res.render("products", {product})
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let idProduct = req.params.id;
         let productEdit = products.find((product)=> product.id == idProduct);
-        res.render('product-edition', {productEdit});
+        res.render('products/product-edition', {productEdit});
     },
 
     update: (req, res)=>{
@@ -106,7 +106,7 @@ res.render("products", {product})
     
     create: (req, res)=>{
         //Esta función solo lleva al formulario de creación del producto
-        res.render('product-create-form');
+        res.render('products/product-create-form');
     },
 
     store: (req, res)=>{
