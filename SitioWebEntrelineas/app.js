@@ -5,6 +5,9 @@ const indexRouter = require('./routes/index-router');
 const productRouter = require('./routes/product-router');
 const userRouter = require('./routes/user-router');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const bcrypt = require('bcryptjs');
 
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, './public')));
@@ -12,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "Nuestro mensaje secreto"}));
 app.use(cookieParser());
+
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
