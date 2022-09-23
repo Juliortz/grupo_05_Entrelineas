@@ -9,19 +9,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const productController = {
 
     list: (req, res)=>{
-
-//  Debería mostrar un listado de 
-//  todos los productos y renderizar la vista
-//  'products' que hay que hacerla y utilizar la vista partials/product-item, 
-//  en general es similar al index.ejs pero no están divididos en novedades, sagas, etc
-const product = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-res.render("products/products", {product})
-
-
-
-
-
+    const product = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    res.render("products/products", {product})
     },
 
     detail: (req, res)=> {
@@ -30,13 +19,11 @@ res.render("products/products", {product})
     res.render('products/product-detail', {productDetail});
     },
 
-
     cart: (req, res)=> {
         //este controlador nos lleva carrito que también tenemos que hacer la vista dinámica
         res.render('products/product-cart');
     },
-
-    
+  
     cartAdd: (req, res)=>{
         // Aquí va la lógica de sumar productos al carrito y tener la posibilidad de eliminarlos del carrito
 
@@ -137,7 +124,7 @@ res.render("products/products", {product})
         const data = JSON.stringify(products, null, " ");
         fs.writeFileSync(productsFilePath, data);
 
-        res.redirect('/')
+        res.redirect('/products')
     },
 
     destroy: (req, res) => {

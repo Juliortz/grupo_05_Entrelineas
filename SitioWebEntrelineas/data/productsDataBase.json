@@ -414,5 +414,21 @@
   "sagas": true,
   "packs": false,
   "img": "1662577389283fuego-y-sangre.jpg"
+ },
+ {
+  "id": 1663961471528,
+  "titulo": "Mi historia",
+  "autor": "yo",
+  "sinopsis": "Idas y Vueltas",
+  "edicion": "2022",
+  "paginas": "52",
+  "idioma": "español",
+  "precio": "1000",
+  "presentacion": "Tapa dura",
+  "novedades": true,
+  "masVendidos": false,
+  "sagas": false,
+  "packs": false,
+  "img": "default-image.jpg"
  }
 ]
