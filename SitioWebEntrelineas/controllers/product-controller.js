@@ -135,8 +135,10 @@ const productController = {
 
 
         if (producto) {
-            fs.unlinkSync("./public/images/products/" + producto.img);
-            console.log("Producto deleted successfull");
+            if(producto.img != "default-image.jpg"){
+                fs.unlinkSync("./public/images/products/" + producto.img);
+                console.log("Producto deleted successfull");
+            }   
         }
         
 
