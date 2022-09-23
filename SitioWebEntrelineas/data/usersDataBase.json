@@ -41,5 +41,69 @@
    "Suspenso"
   ],
   "avatar": "1663961280763shrek.jpg"
+ },
+ {
+  "id": 1663962620037,
+  "first_name": "Raymundo",
+  "last_name": "Martinez",
+  "user": "Raymond123",
+  "email": "raymar@gmail.com",
+  "password": "Raymond123",
+  "country": "Colombia",
+  "genlit": [
+   "Fantasía",
+   "Ciencia ficción",
+   "Drama",
+   "Policial",
+   "Terror"
+  ],
+  "avatar": "1663962620005189f977025937e729da46b1cc98f8189.jpg"
+ },
+ {
+  "id": 1663962750266,
+  "first_name": "Susan",
+  "last_name": "Ahoria",
+  "user": "Susi",
+  "email": "Susiahoria@gmail.com",
+  "password": "Susana123",
+  "country": "Bolivia",
+  "genlit": [
+   "Historia",
+   "Romance",
+   "Política",
+   "Economía",
+   "Autoayuda"
+  ],
+  "avatar": "1663962750262zanahoria.jfif"
+ },
+ {
+  "id": 1663963055826,
+  "first_name": "Milton",
+  "last_name": "Heladas",
+  "user": "MiltonHela",
+  "email": "miltonheladas@gmail.com",
+  "password": "milton123",
+  "country": "Bolivia",
+  "genlit": [
+   "Fantasía",
+   "Historia",
+   "Política"
+  ],
+  "avatar": "1663963055823milton.jpg"
+ },
+ {
+  "id": 1663963167192,
+  "first_name": "Yamile",
+  "last_name": "Perdomo",
+  "user": "Yamipe",
+  "email": "ya.per@dio.com",
+  "password": "yaperdio",
+  "country": "Ecuador",
+  "genlit": [
+   "Fantasía",
+   "Historia",
+   "Política"
+  ],
+  "avatar": "default-image.jpg"
  }
 ]
