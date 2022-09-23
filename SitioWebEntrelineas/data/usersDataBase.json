@@ -105,5 +105,15 @@
    "Política"
   ],
   "avatar": "default-image.jpg"
+ },
+ {
+  "id": 1663968276322,
+  "first_name": "Para",
+  "last_name": "Probar",
+  "user": "para probar",
+  "email": "siquesi@gmail.com",
+  "password": "$2a$10$f9dfuHHQy46DSMIVGc.jOOzSap2iAGFwaT6f62K1J4WiD3IeWqNVG",
+  "country": "Argentina",
+  "avatar": "1663968276319jake el perro.jfif"
  }
 ]
