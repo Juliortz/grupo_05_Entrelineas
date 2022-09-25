@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
 
@@ -33,8 +34,6 @@ const userController = {
         users.push(newUser);
         const data = JSON.stringify(users, null, " ");
         fs.writeFileSync(usersFilePath, data);
-
-        res.redirect('/')
     },
 
     login: (req, res)=>{
