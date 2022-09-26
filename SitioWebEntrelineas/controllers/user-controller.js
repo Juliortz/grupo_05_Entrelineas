@@ -13,6 +13,16 @@ const userController = {
     },
 
     registerProsses: (req, res)=> {
+        
+            const resultValidation = validationResult(req)
+            
+            if (resultValidation.errors.length > 0){
+                res.render('users/register', {
+                    errors : resultValidation.mapped(),
+                    oldData : req.body
+                })
+            } else {
+                
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
               
         const newUser = {
@@ -34,7 +44,9 @@ const userController = {
         users.push(newUser);
         const data = JSON.stringify(users, null, " ");
         fs.writeFileSync(usersFilePath, data);
-    },
+        res.send('Ud. se ha registrado exitosamente');
+    };
+},
 
     login: (req, res)=>{
         res.render('users/login');
