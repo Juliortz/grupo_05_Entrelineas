@@ -21,9 +21,20 @@
         <form action="" method="post" enctype="multipart/form-data">
             <label for="first_name">Nombre:</label><br/>
             <input type="text" name="first_name" value="<%= locals.oldData ? oldData.first_name : null %>" id="first_name"/>
+            <% if (locals.errors && errors.first_name) {%>
+              <div class="errorMessage">
+                  <%= errors.first_name.msg %>
+              </div>
+            <%}%>
+            
             <br/>
             <label for="last_name">Apellido:</label><br/>
             <input type="text" name="last_name" value="<%= locals.oldData ? oldData.last_name : null %>" id="last_name"/>
+            <% if (locals.errors && errors.last_name) {%>
+              <div class="errorMessage">
+                  <%= errors.last_name.msg %>
+              </div>
+            <%}%>
             <br/>
             <label for="avatar">Foto de perfil:</label><br/>
             <input type="file" name="avatar" id="avatar"/>

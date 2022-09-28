@@ -138,7 +138,12 @@ div.register-form button:hover {
     font-weight: bold;
     border: 2px gray solid;
 }
-
+/* Estilo del mensaje de error */
+div.errorMessage {
+    background-color:red;
+    border-radius: 5px;
+    padding: 2px;
+}
 /* Estilo del footer */
 footer div.conteiner {
     width: 100vw;
