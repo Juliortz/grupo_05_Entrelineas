@@ -20,7 +20,7 @@ const userController = require('../controllers/user-controller');
 
 router.get('/register', userController.register);
 
-router.post('/register', validationRegister, upload.single('avatar'), userController.registerProsses);
+router.post('/register', upload.single('avatar'), validationRegister, userController.registerProsses);
 
 router.get('/login', userController.login);
 

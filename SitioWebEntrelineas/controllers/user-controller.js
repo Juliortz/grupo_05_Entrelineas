@@ -17,7 +17,7 @@ const userController = {
             const resultValidation = validationResult(req)
             
             if (resultValidation.errors.length > 0){
-                res.render('users/register', {
+                    res.render('users/register', {
                     errors : resultValidation.mapped(),
                     oldData : req.body
                 })
@@ -44,7 +44,7 @@ const userController = {
         users.push(newUser);
         const data = JSON.stringify(users, null, " ");
         fs.writeFileSync(usersFilePath, data);
-        res.send('Ud. se ha registrado exitosamente');
+        res.send('Ud se ha registrado extitosamente');
     };
 },
 
