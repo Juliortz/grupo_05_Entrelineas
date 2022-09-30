@@ -4,13 +4,13 @@ const multer = require('multer');
 const validationRegister = require('../middlewares/user-validation');
 
 
-var storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, "public/images/users");
     },
     filename: function (req, file, cb) {
       console.log({ file });
-      cb(null, Date.now() + "" + file.originalname);
+      cb(null, Date.now() + "-" + file.originalname);
     },
   });
   
@@ -20,7 +20,7 @@ const userController = require('../controllers/user-controller');
 
 router.get('/register', userController.register);
 
-router.post('/register', upload.single('avatar'), validationRegister, userController.registerProsses);
+router.post('/register',  validationRegister, upload.single('avatar'), userController.registerProsses);
 
 router.get('/login', userController.login);
 
