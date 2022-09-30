@@ -34,17 +34,13 @@ const userController = {
             password: bcrypt.hashSync(req.body.password,10),
             country: req.body.country,
             genlit: req.body.genlit,
-            avatar: "default-image.jpg",
+            avatar: req.file.filename,
             };
-
-            if(req.file) {
-                newUser.avatar = req.file.filename;
-            }
 
         users.push(newUser);
         const data = JSON.stringify(users, null, " ");
         fs.writeFileSync(usersFilePath, data);
-        res.send('Ud se ha registrado extitosamente');
+        res.send('¡Usted se ha registrado exitosamente!');
     };
 },
 
