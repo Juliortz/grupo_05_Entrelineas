@@ -139,8 +139,9 @@ div.register-form button:hover {
     border: 2px gray solid;
 }
 /* Estilo del mensaje de error */
-div.errorMessage {
-    background-color:red;
+span.errorMessage {
+    background-color:rgb(217, 5, 5);
+    font-weight: bold;
     border-radius: 5px;
     padding: 2px;
 }

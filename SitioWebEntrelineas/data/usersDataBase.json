@@ -115,5 +115,15 @@
   "password": "$2a$10$f9dfuHHQy46DSMIVGc.jOOzSap2iAGFwaT6f62K1J4WiD3IeWqNVG",
   "country": "Argentina",
   "avatar": "1663968276319jake el perro.jfif"
+ },
+ {
+  "id": 1664577294630,
+  "first_name": "Miguel",
+  "last_name": "Suarez",
+  "user": "migue07",
+  "email": "miguel@gmail.com",
+  "password": "$2a$10$KrII9vVHSrlW0O6.ba1Zcu00iXPyx8lK8S.K49NZp4PGIGqymDSFy",
+  "country": "Bolivia",
+  "avatar": "1664577294612-1984.jpg"
  }
 ]
