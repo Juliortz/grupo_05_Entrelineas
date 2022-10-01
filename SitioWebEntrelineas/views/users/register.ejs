@@ -49,7 +49,8 @@
             <input type="password" name="password" id="password"/>
             <br>
             <label for="country">País:</label>
-            <select name="country" id="country" >
+            <select name="country" id="country">
+                <option value="">--</option>
                 <option value="Argentina" <%= (locals.oldData && oldData.country === 'Argentina')? 'selected': ''%> >Argentina</option>
                 <option value="Bolivia" <%= (locals.oldData && oldData.country === 'Bolivia')? 'selected': ''%> >Bolivia</option>
                 <option value="Chile" <%= (locals.oldData && oldData.country === 'Chile')? 'selected': ''%> >Chile</option>
