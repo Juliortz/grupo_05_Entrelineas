@@ -16,8 +16,8 @@ app.use(express.json());
 //app.use(session({ secret: "Nuestro mensaje secreto"}));
 app.use(session({
   secret: "Nuestro mensaje secreto",
-  resave: true,
-  saveUninitialized: true
+  resave: false,
+  saveUninitialized: false
 }));
 app.use(cookieParser());
 

@@ -19,6 +19,7 @@
     <form action="./login" method="post">
       <label for="email">E-mail:</label><br/>
       <input type="email" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %>" required/><br/>
+    <!--Aquí paso los errores en caso que exista el usuario o que la constraseña sea incorrecta-->  
       <% if (locals.errors && errors.email) {%>
         <span class="errorMessage">
             <%= errors.email.msg %>

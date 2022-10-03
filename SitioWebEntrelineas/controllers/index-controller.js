@@ -17,7 +17,8 @@ const controller = {
 		let productsMasVendidos = products.filter(p => p.masVendidos == true)
         let productsSagas = products.filter(p => p.sagas == true)
 		let productsPacks = products.filter(p => p.packs == true)
-        res.render('index', {novedades: productsNovedades, masVendidos: productsMasVendidos, sagas: productsSagas, packs: productsPacks, users: usersData })
+        res.render('index', {novedades: productsNovedades, masVendidos: productsMasVendidos, sagas: productsSagas, packs: productsPacks, users: usersData, user: req.session.userLogged })
+    // le paso a la vista del index la propiedad user con los datos del usuario logueado
     }
 }
 module.exports = controller;

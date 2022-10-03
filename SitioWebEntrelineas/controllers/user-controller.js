@@ -62,11 +62,19 @@ const userController = {
         contrasenia = req.body.password;
 
         let userToLogin = users.find(user => user.email === usuario);
+        //pregunto si existe el usuario a loguearse
             if (userToLogin) {
                 let isConstraseniaOk = bcrypt.compareSync(req.body.password, userToLogin.password);
-                if (isConstraseniaOk) {
-                    return res.send('Puedes ingresar');
+                // si existe el usuario, pregunto si coincide con la contraseña
+                    if (isConstraseniaOk) {
+                        //con el delete borro la contraseña para que no quede guardada en la session por seguridad
+                        delete userToLogin.password;
+                        //le asigno al req.session (el userLogged es una propiedad del session) los datos del usuario que se está logueando
+                        req.session.userLogged = userToLogin
+                        //el req.session.userLogged queda disponible para todas las vistas
+                    return res.redirect('/');
                 }
+                // si la contraseña es incorrecta, vuelvo al formulario y mando ese mensaje de error y el oldData sería en este caso para que no se me borre el email que ya estaba en el formulario
                 return res.render('users/login', {
                     errors: {
                         email: {
@@ -77,6 +85,7 @@ const userController = {
                 });
                 
             }
+            //este return corresponde al if que pregunta si existe el email en la base de datos
             return res.render('users/login', {
                 errors: {
                     email: {
@@ -84,23 +93,6 @@ const userController = {
                     }        
                 }
             });
-
-
-
-        // users.forEach(user => {
-        //     if (user.email == usuario) {
-        //         console.log('email correcto')
-        //         datosUsuario = user;
-        //         if (bcrypt.compareSync(contrasenia, user.password)) {
-        //             res.render('/',{datosUsuario : datosUsuario});
-        //             console.log('contraseña correcta')
-        //         }else{
-        //             res.render('users/login',{error: 'Contraseña invalida'})
-        //         }
-        //     }else{
-        //         res.render('users/login',{error: 'Email invalido'})
-        //     }
-        // })        
     }
 };
 

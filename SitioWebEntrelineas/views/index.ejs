@@ -2,11 +2,13 @@
 <html lang="en">
 <%- include('./partials/head') %>
 <body>
-  <%  if(locals.datosUsuario?.user){ %>
-    <%- include('./partials/header',{datosUsuario}) %>
+  <!--si la vista recibe datos de un usuario logueado, incluye al header_login, sino al otro header, si no lo hago así, me marca error al entrar por primera vez al index sin datos de usuarios-->
+  <%  if(user){ %>
+    <%- include('./partials/header_login') %>
 <% }else{ %> 
   <%- include('./partials/header') %>
-  <% } %> 
+ <%}%>
+
   <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
   <div class="complete-conteiner">
   <main>
