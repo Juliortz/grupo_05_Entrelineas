@@ -125,5 +125,15 @@
   "password": "$2a$10$KrII9vVHSrlW0O6.ba1Zcu00iXPyx8lK8S.K49NZp4PGIGqymDSFy",
   "country": "Bolivia",
   "avatar": "1664577294612-1984.jpg"
+ },
+ {
+  "id": 1664747016332,
+  "first_name": "val",
+  "last_name": "Daza",
+  "user": "valDaza",
+  "email": "valdaza@gmail.com",
+  "password": "$2a$10$k7ZIE66aR3CGUNlyCKAL..sbyPCEVZHo4I4wYo7nnuR/lZHRObspa",
+  "country": "Colombia",
+  "avatar": "1664747016303-Sign-Up1.jpg"
  }
 ]
