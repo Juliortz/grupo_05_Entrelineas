@@ -23,6 +23,7 @@ router.get('/register', userController.register);
 router.post('/register', upload.single('avatar'), validationRegister, userController.registerProsses);
 
 router.get('/login', userController.login);
+router.post('/login',userController.logVerification)
 
 
 module.exports = router;

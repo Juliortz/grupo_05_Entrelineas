@@ -46,6 +46,33 @@ const userController = {
 
     login: (req, res)=>{
         res.render('users/login');
+    },
+
+    logVerification: (req, res)=>{
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+        usuario = req.body.user_name;
+        contrasenia = req.body.password;
+        users.forEach(user => {
+            if (user.email == usuario) {
+                console.log('email correcto')
+                datosUsuario = user;
+                if (bcrypt.compareSync(contrasenia, user.password)) {
+                    res.render('/',{datosUsuario : datosUsuario});
+                    console.log('contraseña correcta')
+                }else{
+                    res.render('users/login',{error: 'Contraseña invalida'})
+                }
+            }else{
+                res.render('users/login',{error: 'Email invalido'})
+            }
+        })
+
+
+
+
+
+
+        
     }
 };
 
