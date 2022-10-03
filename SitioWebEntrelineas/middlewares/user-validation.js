@@ -25,7 +25,7 @@ const validateRegister = [
     body('email').notEmpty().withMessage('¡Olvidaste escribir un email!').bail()
     .isEmail().withMessage('¡Tiene que ser un email válido!'),
     body('password').notEmpty().withMessage('¡Olvidaste escribir una contraseña!').bail()
-    .isLength({min: 6}).withMessage('¡Debe tener al menos seis caracteres!').bail(),
+    .isLength({min: 6}).withMessage('¡Debe tener al menos seis caracteres!'),
     body('country').notEmpty().withMessage('¡Debes seleccionar un país!')
 ];
 

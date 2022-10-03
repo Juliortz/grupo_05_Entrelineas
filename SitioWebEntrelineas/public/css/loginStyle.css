@@ -132,7 +132,14 @@ div.login-form button:hover {
     font-weight: bold;
     border: 2px gray solid;
 }
-
+/* Estilo del mensaje de error */
+span.errorMessage {
+    background-color:rgb(217, 5, 5);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 2px;
+    margin-bottom: 2px;
+}
 /* Estilo del footer */
 footer div.conteiner {
     width: 100vw;

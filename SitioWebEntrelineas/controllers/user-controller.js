@@ -3,7 +3,7 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
+//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
 
 
 
@@ -12,19 +12,27 @@ const userController = {
         res.render('users/register');
     },
 
-    registerProsses: (req, res)=> {
-        
-            const resultValidation = validationResult(req)
+    registerProcess: (req, res)=> {
+        const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
+        let userFound = users.find(user => user.email === req.body.email);
+        const resultValidation = validationResult(req);
             
             if (resultValidation.errors.length > 0){
-                    res.render('users/register', {
+                return res.render('users/register', {
                     errors : resultValidation.mapped(),
                     oldData : req.body
                 })
+            } else if (userFound) {
+                return res.render('users/register', {
+                    errors : {
+                        email : {
+                            msg: 'Este email ya está registrado'
+                        }
+                    },
+                    oldData : req.body
+                })
             } else {
-                
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
-              
+                  
         const newUser = {
             id: Date.now(),
             first_name: req.body.first_name,
@@ -40,7 +48,7 @@ const userController = {
         users.push(newUser);
         const data = JSON.stringify(users, null, " ");
         fs.writeFileSync(usersFilePath, data);
-        res.send('¡Usted se ha registrado exitosamente!');
+        return res.redirect ('../users/login');
     };
 },
 
@@ -50,29 +58,49 @@ const userController = {
 
     logVerification: (req, res)=>{
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        usuario = req.body.user_name;
+        usuario = req.body.email;
         contrasenia = req.body.password;
-        users.forEach(user => {
-            if (user.email == usuario) {
-                console.log('email correcto')
-                datosUsuario = user;
-                if (bcrypt.compareSync(contrasenia, user.password)) {
-                    res.render('/',{datosUsuario : datosUsuario});
-                    console.log('contraseña correcta')
-                }else{
-                    res.render('users/login',{error: 'Contraseña invalida'})
+
+        let userToLogin = users.find(user => user.email === usuario);
+            if (userToLogin) {
+                let isConstraseniaOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+                if (isConstraseniaOk) {
+                    return res.send('Puedes ingresar');
                 }
-            }else{
-                res.render('users/login',{error: 'Email invalido'})
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                        msg:'Las credenciales son incorrectas'
+                        }
+                    },
+                    oldData: req.body
+                });
+                
             }
-        })
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                    msg:'Ud. no se encuentra registrado, por favor registrese'
+                    }        
+                }
+            });
 
 
 
-
-
-
-        
+        // users.forEach(user => {
+        //     if (user.email == usuario) {
+        //         console.log('email correcto')
+        //         datosUsuario = user;
+        //         if (bcrypt.compareSync(contrasenia, user.password)) {
+        //             res.render('/',{datosUsuario : datosUsuario});
+        //             console.log('contraseña correcta')
+        //         }else{
+        //             res.render('users/login',{error: 'Contraseña invalida'})
+        //         }
+        //     }else{
+        //         res.render('users/login',{error: 'Email invalido'})
+        //     }
+        // })        
     }
 };
 
