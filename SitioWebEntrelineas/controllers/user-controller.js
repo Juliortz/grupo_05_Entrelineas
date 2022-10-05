@@ -72,7 +72,7 @@ const userController = {
                         //le asigno al req.session (el userLogged es una propiedad del session) los datos del usuario que se está logueando
                         req.session.userLogged = userToLogin
                         //el req.session.userLogged queda disponible para todas las vistas
-                    return res.redirect('/');
+                    return res.redirect('/users/profile');
                 }
                 // si la contraseña es incorrecta, vuelvo al formulario y mando ese mensaje de error y el oldData sería en este caso para que no se me borre el email que ya estaba en el formulario
                 return res.render('users/login', {
@@ -93,7 +93,15 @@ const userController = {
                     }        
                 }
             });
+    },
+    profile: (req, res) => {
+        res.render('users/profile', {user: req.session.userLogged})
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/');
     }
+
 };
 
 module.exports = userController;

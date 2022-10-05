@@ -137,41 +137,17 @@
   "avatar": "1664747016303-Sign-Up1.jpg"
  },
  {
-  "id": 1664806480496,
-  "first_name": "María",
+  "id": 1664975184186,
+  "first_name": "Laura",
   "last_name": "Elías",
-  "user": "marialau",
-  "email": "marialaura@gmail.com",
-  "password": "$2a$10$ravYtSIAXnq.XhBInKh3uufArZ40601rF56G3Ybd2x6o4Y79/QtNy",
-  "country": "Argentina",
-  "genlit": [
-   "Fantasia",
-   "Historia"
-  ],
-  "avatar": "1664806480467-perfil proyecto.jpg"
- },
- {
-  "id": 1664806550706,
-  "first_name": "María",
-  "last_name": "Elías",
-  "user": "marialau",
+  "user": "LauElías",
   "email": "eliasmarialaura@gmail.com",
-  "password": "$2a$10$weAgdK7vKght.NtsNrKObeFYGFQIFWMZY/DnAmMlHwYStcdcs9b.i",
-  "country": "Argentina",
-  "avatar": "1664806550682-perfil proyecto.jpg"
- },
- {
-  "id": 1664806817422,
-  "first_name": "María",
-  "last_name": "Elías",
-  "user": "marialau",
-  "email": "laura@gmail.com",
-  "password": "$2a$10$cNc2DFLxd7a9UZIuLN1ZdOEO7DOsytXym6CKcT2rtiTLG.sz35shy",
+  "password": "$2a$10$xq3krRtbJxgGrmckVOMz8.LduIRf20W.FkuXcy/dbWtdX9tytpPPC",
   "country": "Argentina",
   "genlit": [
    "Fantasia",
    "Historia"
   ],
-  "avatar": "1664806817403-shrek.jpg"
+  "avatar": "1664975184168-perfil proyecto.jpg"
  }
 ]
