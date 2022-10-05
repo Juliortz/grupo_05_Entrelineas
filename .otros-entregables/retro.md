@@ -76,3 +76,29 @@ DEJAR DE HACER:
 
 •Procrastinar. El curso es exigente por sí mismo y lo que cada uno de nosotros enfrenta o vive cada día, pareciera que dificultara un poco más las cosas. El trabajo, la facultad, la familia, los amigos, todo exige, demanda tiempo y agota, pero está en nosotros organizarnos, priorizar lo que se debe priorizar, esforzarnos y hacer las cosas cada vez mejor. No hacer mañana lo que se puede hacer hoy, ese es el mantra que debemos repetirnos y nos daremos cuenta de que la meta, está más cerca de nosotros de lo que creemos.
 
+
+TERCERA ACTUALIZACIÓN DE LA RETROSPECTIVA
+
+SEGUIR HACIENDO: 
+
+Reuniones, reuniones y más reuniones. Entramos en la recta final, se siente y nada mejor para planificarnos, evaluarnos, ponernos al tanto y seguir oportunamente el desarrollo de nuestro proyecto que, reuniéndonos periódicamente, cada vez con mayor frecuencia. 
+
+Autoevaluaciones. Son indispensables para un buen entendimiento con el equipo y permiten, al saber de lo que cada uno es capaz con honestidad y de cómo venimos aportando al proyecto, cómo se puede colaborar más y mejor. 
+
+HACER MÁS:
+
+Más reuniones. Ahora más que nunca. El proyecto lo exige y debemos hacerlo. No solo por el grado de complejidad alcanzado hasta ahora, sino por la propia dinámica del trabajo en equipo. Si queremos aportar al proyecto de forma oportuna, organizada y eficiente, las reuniones no solo son necesarias, también son ideales. 
+
+EMPEZAR A HACER:
+
+Fortalecer el ¨sentimiento de equipo¨, comprendiendo las distintas visiones de cada uno de los miembros y aceptando la pluralidad de opciones al momento de encontrar soluciones a problemas, favoreciendo directamente el intercambio de conocimientos y buenas prácticas, y generando un clima respetuoso e idóneo para el progreso de los todos los miembros.
+
+HACER MENOS:
+
+Limitar los recursos de apoyo a los suministrados por el curso. A pesar de tratarse estos de una fuente bastante completa y didáctica para la adquisición de conocimientos y puesta en práctica de los mismos, resulta favorable que al momento de resolver problemas o completar tareas, también nos apoyemos en la internet, ya que se trata igualmente de una inagotable fuente de conocimientos actualizados y prácticos. 
+
+DEJAR DE HACER:
+
+De nuevo: procrastinar. La clave está en planificar, priorizar y completar las tareas de la forma estipulada, en el tiempo estipulado, lo que facilita la evaluación y corrección de las mismas, permitiendo mantener cierto estándar de trabajo en el equipo y alcanzar los objetivos de la mejor manera.
+
+
