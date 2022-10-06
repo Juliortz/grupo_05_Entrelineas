@@ -149,5 +149,21 @@
    "Historia"
   ],
   "avatar": "1664975184168-perfil proyecto.jpg"
+ },
+ {
+  "id": 1665013406913,
+  "first_name": "teo",
+  "last_name": "herrera",
+  "user": "teoherrera",
+  "email": "teoh@gmail.com",
+  "password": "$2a$10$CCCX2UCRJTi9TfKdId04BuD9KdxVYTIMOiNASb0sowBshVWbH1K2e",
+  "country": "Colombia",
+  "genlit": [
+   "Fantasia",
+   "Ciencia ficción",
+   "Terror",
+   "Suspenso"
+  ],
+  "avatar": "1665013406880-IMG-20131015-WA0001.jpg"
  }
 ]

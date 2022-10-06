@@ -7,6 +7,7 @@ const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 
 
 
+
 const userController = {
     register: (req, res)=> {
         res.render('users/register');
@@ -72,6 +73,9 @@ const userController = {
                         //le asigno al req.session (el userLogged es una propiedad del session) los datos del usuario que se está logueando
                         req.session.userLogged = userToLogin
                         //el req.session.userLogged queda disponible para todas las vistas
+                        if(req.body.remindMe){
+                            res.cookie('perfil', req.body.email, {maxAge: (1000 * 60 ) *60})
+                        }
                     return res.redirect('/users/profile');
                 }
                 // si la contraseña es incorrecta, vuelvo al formulario y mando ese mensaje de error y el oldData sería en este caso para que no se me borre el email que ya estaba en el formulario
@@ -95,10 +99,13 @@ const userController = {
             });
     },
     profile: (req, res) => {
+        console.log(req.cookies.perfil);
         res.render('users/profile', {user: req.session.userLogged})
+        
     },
     logout: (req, res) => {
         req.session.destroy();
+        res.clearCookie('perfil')
         return res.redirect('/');
     }
 
