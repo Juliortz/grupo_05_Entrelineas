@@ -14,14 +14,28 @@ const storage = multer.diskStorage({
       cb(null, Date.now() + "-" + file.originalname);
     },
   });
+  function fileFilter (req, file, cb) {
+
+    // La función debe llamar a `cb` usando una variable del tipo boolean
+    // para indicar si el archivo debería ser aceptado o no
   
-  const upload = multer({ storage });
+    // Para rechazar el archivo es necesario pasar `false`, de la siguiente forma:
+   // cb(null, false)
+  
+    // Para aceptar el archivo es necesario pasar `true`, de la siguiente forma:
+    cb(null, true)
+  
+    // Siempre puedes pasar un error en caso de que algo salga mal:
+    //cb(new Error('No tengo la menor idea!'))
+  
+  }
+  const upload = multer({ storage, fileFilter});
 
 
 //No pueden acceder los usuarios logueados al formulario de registro
 router.get('/register', userLoggedMiddleware, userController.register);
 
-router.post('/register', upload.single('avatar'), validationRegister, userController.registerProcess);
+router.post('/register', validationRegister,upload.single('avatar'), userController.registerProcess);
 
 //No pueden acceder los usuarios logueados al formulario login
 router.get('/login', userLoggedMiddleware, userController.login);

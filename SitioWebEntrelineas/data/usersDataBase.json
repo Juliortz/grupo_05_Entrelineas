@@ -165,5 +165,16 @@
    "Suspenso"
   ],
   "avatar": "1665013406880-IMG-20131015-WA0001.jpg"
+ },
+ {
+  "id": 1665108859249,
+  "first_name": "josema",
+  "last_name": "alvarez",
+  "user": "josema",
+  "email": "josema@gmail.com",
+  "password": "$2a$10$7aBvJZDvXTMjOfOX5wOg/uLPSiCPHuT1oFpJYBIDPJBIl1H2t1Jhe",
+  "country": "Argentina",
+  "genlit": "Fantasia",
+  "avatar": "1665108859198-astronauta.jpg"
  }
 ]
