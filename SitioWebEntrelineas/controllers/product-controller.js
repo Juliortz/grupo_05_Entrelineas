@@ -141,10 +141,7 @@ const productController = {
             }   
         }
         
-
-        let indice = products.indexOf(producto);
-        console.log(indice);
-        products = products.splice(0, indice);
+        products = products.filter(product => product != producto);
         const data = JSON.stringify(products, null, " ");
         fs.writeFileSync(productsFilePath, data);
         res.redirect("/products");
