@@ -20,20 +20,20 @@ const productController = require('../controllers/product-controller');
 
 router.get('/', productController.list);
 
-router.get('/create', productController.create);
-router.post('/create', upload.single('imagenProducto'), productController.store);
+// router.get('/create', productController.create);
+// router.post('/create', upload.single('imagenProducto'), productController.store);
 
-router.get('/detail/:id', productController.detail);
+// router.get('/detail/:id', productController.detail);
 
-router.get('/edit/:id', productController.edit);
-router.put('/edit/:id', upload.single('imagenProducto'), productController.update)
+// router.get('/edit/:id', productController.edit);
+// router.put('/edit/:id', upload.single('imagenProducto'), productController.update)
 
-router.get('/cart', productController.cart);
+// router.get('/cart', productController.cart);
 
 
-router.post('/cart', productController.cartAdd);
+// router.post('/cart', productController.cartAdd);
 
-router.delete('/delete/:id', productController.destroy);
+// router.delete('/delete/:id', productController.destroy);
 
 
 

@@ -2,21 +2,21 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Categories';
     let cols = {
         id: {
-            type: dataTypes.INTERGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         name: dataTypes.STRING,
     };
     let config = {
-        tableName: 'Categories',
+        tableName: 'categories',
         timestamps: false,
     };
 
     const Category = sequelize.define(alias, cols, config);
 
     Category.associate = function (models){
-        Category.belongsToMany(models.Products, {
+        Category.belongsToMany(models.Product, {
             as: 'products',
             through: 'product_category',
             foreingKey: 'category_id',

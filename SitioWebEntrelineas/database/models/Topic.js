@@ -2,14 +2,14 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Topics';
     let cols = {
         id: {
-            type: dataTypes.INTERGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         name: dataTypes.STRING,
     };
     let config = {
-        tableName: 'Topics',
+        tableName: 'topics',
         timestamps: false,
     };
 
