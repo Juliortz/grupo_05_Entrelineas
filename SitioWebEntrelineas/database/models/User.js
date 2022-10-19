@@ -12,7 +12,6 @@ module.exports = (sequelize, dataTypes) => {
         email: dataTypes.STRING,
         password: dataTypes.STRING,
         country_id: dataTypes.INTEGER,
-        topic_id: dataTypes.INTEGER,
         avatar: dataTypes.TEXT
     };
     let config = {

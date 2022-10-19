@@ -13,8 +13,6 @@ module.exports = (sequelize, dataTypes) => {
         edition: dataTypes.INTEGER,
         pages: dataTypes.INTEGER,
         language: dataTypes.STRING,
-        category_id: dataTypes.INTEGER,
-        topic_id: dataTypes.INTEGER,
         presentation: dataTypes.STRING,
         image: dataTypes.TEXT
     };
