@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Countries';
+    let alias = 'Country';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
     const Country = sequelize.define(alias, cols, config);
 
     Country.associate = function(models) {
-        Country.hasMany(models.Users,{
+        Country.hasMany(models.User,{
             as: 'users',
             foreingKey: 'country_id'
         })

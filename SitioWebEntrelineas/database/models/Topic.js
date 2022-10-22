@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Topics';
+    let alias = 'Topic';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -16,14 +16,14 @@ module.exports = (sequelize, dataTypes) => {
     const Topic = sequelize.define(alias, cols, config);
 
     Topic.associate = function(models) {
-        Topic.belongsToMany(models.Users, {
+        Topic.belongsToMany(models.User, {
             as: 'users',
             through: 'user_topic',
             foreingKey: 'topic_id',
             otherKey: 'user_id',
             timestamps: false,
         }),
-        Topic.belongsToMany(models.Products, {
+        Topic.belongsToMany(models.Product, {
             as: 'products',
             through: 'product_topic',
             foreingKey: 'topic_id',
