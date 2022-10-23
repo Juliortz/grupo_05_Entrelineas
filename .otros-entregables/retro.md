@@ -1,4 +1,4 @@
-RETROSPECTIVA
+RETROSPECTIVA:
 
 Implementando la dinámica "estrella de mar", llegamos a las siguientes conclusiones:
 
@@ -29,7 +29,7 @@ DEJAR DE HACER:
 •Recurrir a excusas y evadir la responsabilidad del trabajo. Se trata de ser honestos no solo con el equipo, sino también con uno mismo. Si la tarea asignada no puede ser realizada en la forma y el tiempo correspondientes, ya sea por falta de tiempo o porque el encargado de hacerla no cuente con los conocimientos o habilidades necesarias para ello, o porque simplemente, no quiera hacerlo, esto debe comunicarse al resto del equipo de forma honesta y oportuna, para en conjunto tomar la que se considere la mejor decisión. 
 
 
-ACTUALIZACIÓN
+RETROSPECTIVA - ACTUALIZACIÓN 1:
 
 SEGUIR HACIENDO: 
 
@@ -54,7 +54,7 @@ DEJAR DE HACER:
 •No ser honestos con el resto del equipo. Si no se cuenta con la disposición o el enfoque de cumplir con los objetivos exigidos, ya sea por cuestiones de tiempo, desmotivación o situaciones ajenas a la voluntad, esto debe comunicarse oportunamente, con el fin de evitar molestias y no afectar el desempeño general del equipo. 
 
 
-NUEVA ACTUALIZACIÓN
+RETROSPECTIVA - ACTUALIZACIÓN 2:
 
 SEGUIR HACIENDO: 
 
@@ -77,7 +77,7 @@ DEJAR DE HACER:
 •Procrastinar. El curso es exigente por sí mismo y lo que cada uno de nosotros enfrenta o vive cada día, pareciera que dificultara un poco más las cosas. El trabajo, la facultad, la familia, los amigos, todo exige, demanda tiempo y agota, pero está en nosotros organizarnos, priorizar lo que se debe priorizar, esforzarnos y hacer las cosas cada vez mejor. No hacer mañana lo que se puede hacer hoy, ese es el mantra que debemos repetirnos y nos daremos cuenta de que la meta, está más cerca de nosotros de lo que creemos.
 
 
-TERCERA ACTUALIZACIÓN DE LA RETROSPECTIVA
+RETROSPECTIVA - ACTUALIZACIÓN 3:
 
 SEGUIR HACIENDO: 
 
@@ -100,5 +100,29 @@ Limitar los recursos de apoyo a los suministrados por el curso. A pesar de trata
 DEJAR DE HACER:
 
 De nuevo: procrastinar. La clave está en planificar, priorizar y completar las tareas de la forma estipulada, en el tiempo estipulado, lo que facilita la evaluación y corrección de las mismas, permitiendo mantener cierto estándar de trabajo en el equipo y alcanzar los objetivos de la mejor manera.
+
+
+RETROSPECTIVA - ACTUALIZACIÓN 4:
+
+
+SEGUIR HACIENDO:
+
+Una palabra: REUNIONES. Ya en la etapa final de la cursada, las reuniones resultan imprescindibles a la hora de organizar el trabajo, resolver problemas, intercambiar ideas, fomentar el compromiso y evaluar nuestro desempeño. 
+
+HACER MÁS:
+
+Autoevaluaciones. A veces son duras, sí, pero muy necesarias, ya que permiten tomar consciencia del progreso real de cada uno en lo referente a la adquisición de conocimientos y de nuestro desempeño en el equipo, permitiendo alcanzar un mayor grado de responsabilidad, motivación y disciplina. 
+
+EMPEZAR A HACER:
+
+Promover el “nosotros” antes que el “yo”. Delegar, confiar, reconocer y celebrar los méritos de los demás miembros del grupo. Quizás se trata de un pequeño detalle, pero crear un sentimiento de pertenencia para con el equipo es fundamental. Cuanto más involucrados nos sentimos, más nos esforzamos por conseguir los mejores resultados.
+
+HACER MENOS:
+
+Procrastinar. Es entendible que en nuestro día a día nos encontremos absortos en un sinfín de actividades y compromisos de todo tipo, pero de alguna manera, se debe encontrar un equilibrio entre ello y las tareas asignadas del proyecto. No dejar los pendientes para última hora, resulta crucial para un correcto desarrollo y un oportuno cumplimiento de los objetivos planteados.
+
+DEJAR DE HACER:
+
+Desmotivarse. La motivación es un factor determinante al momento de trabajar, debido a que esto se ve reflejado en los resultados. Si todas las partes quieren hacer bien su trabajo y ese esfuerzo les es reconocido, todo marchará por el buen camino. Una buena actitud facilitará las cosas al momento de plantear ideas, conciliar visiones y solventar problemas. 
 
 
