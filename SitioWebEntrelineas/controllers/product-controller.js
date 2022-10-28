@@ -5,7 +5,7 @@ const Products = db.Product;
 
 const productController = {
     list: (req, res)=> {
-        console.log(Products);
+        
         Products.findAll()
         .then(product => {
             res.render("products/products", {product})

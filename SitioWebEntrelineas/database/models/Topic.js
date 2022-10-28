@@ -19,14 +19,14 @@ module.exports = (sequelize, dataTypes) => {
         Topic.belongsToMany(models.User, {
             as: 'users',
             through: 'user_topic',
-            foreingKey: 'topic_id',
+            foreignKey: 'topic_id',
             otherKey: 'user_id',
             timestamps: false,
         }),
         Topic.belongsToMany(models.Product, {
             as: 'products',
             through: 'product_topic',
-            foreingKey: 'topic_id',
+            foreignKey: 'topic_id',
             otherKey: 'product_id',
             timestamps: false,
         })

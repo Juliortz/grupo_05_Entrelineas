@@ -1,12 +1,29 @@
+//const { cloneDeep, isColString } = require('sequelize/types/utils');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
 const Products = db.Product;
+const Categories = db.Category;
 
 const controller = {
-  index: (req, res)=> {
+   index: (req, res)=> {
+    let promesProducts =  Products.findAll ()
+    let promesCategories = Categories.findAll({
+      include: ['products']
+    })
 
-    res.render('index', {novedades: productsNovedades, masVendidos: productsMasVendidos, sagas: productsSagas, packs: productsPacks, users: usersData, user: req.session.userLogged })
+    Promise.all([promesProducts, promesCategories])
+
+    .then(([allProducts, allCategories])=>{
+      
+           
+      return res.render('index',{products: allProducts, categories: allCategories})
+      
+  
+     })
+
+    }
   }
-}
+
 module.exports = controller;
+

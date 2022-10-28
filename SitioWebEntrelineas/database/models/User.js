@@ -24,19 +24,19 @@ module.exports = (sequelize, dataTypes) => {
     User.associate = function(models) {
         User.belongsTo(models.Country,{
             as: 'countries',
-            foreingKey: 'country_id'
+            foreignKey: 'country_id'
         }),
         User.belongsToMany(models.Product, {
             as: 'products',
             through: 'user_product',
-            foreingKey: 'user_id',
+            foreignKey: 'user_id',
             otherKey: 'product_id',
             timestamps: false,
         }),
         User.belongsToMany(models.Topic, {
             as: 'topics',
             through: 'user_topic',
-            foreingKey: 'user_id',
+            foreignKey: 'user_id',
             otherKey: 'topic_id',
             timestamps: false,
         })
