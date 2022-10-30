@@ -2,6 +2,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 
 const Products = db.Product;
+let img= "";
 
 const productController = {
     list: (req, res)=> {
@@ -10,8 +11,67 @@ const productController = {
         .then(product => {
             res.render("products/products", {product})
         })
+    },
+    create:(req, res)=>{
+        res.render("products/product-create-form")
+    },
+    store: (req, res)=>{
+        if (req.file){
+             img = req.file.filename;
+        }
+        else{
+             img = "default-image.jpg"
+        }
+        Products.create({
+            title: req.body.titulo,
+            author: req.body.autor,
+            synopsis: req.body.sinopsis,
+            price: req.body.precio,
+            edition: req.body.edicion,
+            pages: req.body.paginas,
+            image: img,
+            lenguage: req.body.idioma,
+            presentation: req.body.presentacion,
+        })
+        res.redirect("/products")
+    },
+    detail: (req, res) =>{
+        Products.findByPk(req.params.id, {
+            include: {association: "categories" }
+        })
+        .then((libro)=>{
+           
+            res.render("products/product-detail", {
+                libro:libro
+            })
+        })
+    },
+
+    destroy: (req, res)=>{
+        Products.fileByPk((req.params)) 
+        .then((libro)=>{
+            if (libro.image !="default-image.jpg"){
+                fs.unlinkSync("./public/images/products/" + producto.img);
+                console.log("Producto deleted successfull");
+            }
+        })
+        Products.destroy({
+            where: {id: req.params.id}
+        })
+        res.redirect("/products")
+    },
+    edit: (req, res)=>{
+        Products.findByPk(req.params.id, {
+            include: {association: "categories" }
+        })
+        .then((libro)=>{
+            res.render("products/product-edition", {
+                libro:libro
+            })
+        })
     }
 }
+
 
 module.exports = productController
 

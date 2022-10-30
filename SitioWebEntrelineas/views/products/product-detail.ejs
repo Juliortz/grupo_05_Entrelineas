@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="stylesheet" href="/css/productDetailStyle.css">
-        <title><%= productDetail.titulo %></title>
+        <title><%= libro.title %></title>
     </head>
 <body>
     <header>
@@ -61,13 +61,13 @@
     <main>
       <div class="container">
         <div class="product-image">
-            <img src="/images/products/<%= productDetail.img %>" alt="Libro yo, robot"/>
+            <img src="/images/products/<%= libro.image %>" alt="Libro yo, robot"/>
         </div>
         <section class="description-sinopsis-list">
             <div class="product-tittle-price">
-            <h1><%= productDetail.titulo %></h1>
-            <h3><%= productDetail.autor %></h3>
-            <span>$ <%= productDetail.precio %></span>
+            <h1><%= libro.title %></h1>
+            <h3><%= libro.author %></h3>
+            <span>$ <%= libro.price %></span>
             </div>
             <br/>
             <div class="button-contain">
@@ -83,13 +83,13 @@
           
           </form>
            
-            <form action="../edit/<%= productDetail.id %>" method="GET">
+            <form action="../edit/<%= libro.id %>" method="GET">
             
                 <button type="submit" name="button" value="Editar" class="button">Editar</button>
             
             </form>
             
-            <form action="../delete/<%= productDetail.id %>?_method=DELETE" method="POST">
+            <form action="../delete/<%= libro.id %>?_method=DELETE" method="POST">
             
                 <button type="submit" name="button" value="Eliminar" class="button">Eliminar</button>
             
@@ -99,16 +99,16 @@
             <div class="sinopsis">
             <h4>Sinopsis</h4>
             <br/>
-            <p><%= productDetail.sinopsis %></p>
+            <p><%= libro.synopsis %></p>
             </div>
             <br></br>
             <div class="ficha">
             <h4>Ficha técnica</h4>
               <ul type="none">
-                <li>Edición: <%= productDetail.edicion %></li>
-                <li>Páginas: <%= productDetail.paginas %></li>
-                <li>Idioma: <%= productDetail.idioma %></li>
-                <li>Presentación: <%= productDetail.presentacion %></li>
+                <li>Edición: <%= libro.edition %></li>
+                <li>Páginas: <%= libro.pages %></li>
+                <li>Idioma: <%= libro.lenguage %></li>
+                <li>Presentación: <%= libro.presentation %></li>
               </ul>
             </div>
         </section>
