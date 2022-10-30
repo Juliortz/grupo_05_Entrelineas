@@ -27,21 +27,21 @@ module.exports = (sequelize, dataTypes) => {
         Product.belongsToMany(models.User, {
             as: 'users',
             through: 'user_product',
-            foreingKey: 'product_id',
+            foreignKey: 'product_id',
             otherKey: 'user_id',
             timestamps: false,
         }),
         Product.belongsToMany(models.Topic, {
             as: 'topics',
             through: 'product_topic',
-            foreingKey: 'product_id',
+            foreignKey: 'product_id',
             otherKey: 'topic_id',
             timestamps: false,
         }),
         Product.belongsToMany(models.Category, {
             as: 'categories',
             through: 'product_category',
-            foreingKey: 'product_id',
+            foreignKey: 'product_id',
             otherKey: 'category_id',
             timestamps: false,
         })

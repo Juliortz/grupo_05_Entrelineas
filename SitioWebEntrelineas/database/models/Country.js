@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
     Country.associate = function(models) {
         Country.hasMany(models.User,{
             as: 'users',
-            foreingKey: 'country_id'
+            foreignKey: 'country_id'
         })
     };
     return Country;
