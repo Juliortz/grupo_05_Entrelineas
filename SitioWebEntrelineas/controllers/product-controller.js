@@ -1,8 +1,11 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
+const Topics = db.Topic;
+const Categories = db.Category;
 const Products = db.Product;
 let img= "";
+let topicsArray = [];
 
 const productController = {
     list: (req, res)=> {
@@ -13,7 +16,14 @@ const productController = {
         })
     },
     create:(req, res)=>{
-        res.render("products/product-create-form")
+        
+        Topics.findAll()
+        .then((topics)=> {
+            for(let i=0; i<topics.length; i++){
+                topicsArray.push(topics[i].dataValues.name)
+            } 
+            res.render("products/product-create-form", {topics: topicsArray})
+        }) 
     },
     store: (req, res)=>{
         if (req.file){

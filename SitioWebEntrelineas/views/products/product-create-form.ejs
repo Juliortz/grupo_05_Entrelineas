@@ -81,8 +81,15 @@
                 <br/>
                 <h3>Ficha técnica:</h3>
                 <br/>
+                <label for="genero">Genero:</label>
+                  <select id="genero" name="genero">
+                    <% for (let i=0; i<topics.length; i++ ){ %> 
+                      <option value="<%topics[i]%>"><%=topics[i]%></option>
+                    <% } %>   
+                </select>
+                <br/>
                 <label for="edicion">Edición:</label>
-                <input type="number" name="edicion" id="edicion"/>
+                <input type="se" name="edicion" id="edicion"/>
                 <br/>
                 <label for="paginas">Páginas:</label>
                 <input type="number" name="paginas" id="paginas"/>
