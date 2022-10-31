@@ -43,6 +43,8 @@ const productController = {
             lenguage: req.body.idioma,
             presentation: req.body.presentacion,
         })
+
+        
         res.redirect("/products")
     },
     detail: (req, res) =>{

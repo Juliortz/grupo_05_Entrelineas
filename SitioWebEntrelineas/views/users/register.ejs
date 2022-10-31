@@ -70,14 +70,14 @@
             <label for="country">País:</label>
             <select name="country" value="<%= locals.oldData ? oldData.country : null %>" id="country">
                 <option value="">--</option>
-                <option value="Argentina" <%= (locals.oldData && oldData.country === 'Argentina')? 'selected': ''%> >Argentina</option>
-                <option value="Bolivia" <%= (locals.oldData && oldData.country === 'Bolivia')? 'selected': ''%> >Bolivia</option>
-                <option value="Chile" <%= (locals.oldData && oldData.country === 'Chile')? 'selected': ''%> >Chile</option>
-                <option value="Colombia" <%= (locals.oldData && oldData.country === 'Colombia')? 'selected': ''%> >Colombia</option>
-                <option value="Ecuador" <%= (locals.oldData && oldData.country === 'Ecuador')? 'selected': ''%> >Ecuador</option>
-                <option value="Peru" <%= (locals.oldData && oldData.country === 'Peru')? 'selected': ''%> >Perú</option>
-                <option value="Uruguay" <%= (locals.oldData && oldData.country === 'Uruguay')? 'selected': ''%> >Uruguay</option>
-                <option value="Venezuela" <%= (locals.oldData && oldData.country === 'Venezuela')? 'selected': ''%> >Venezuela</option>
+                <option value=1 <%= (locals.oldData && oldData.country === 'Argentina')? 'selected': ''%> >Argentina</option>
+                <option value=2 <%= (locals.oldData && oldData.country === 'Bolivia')? 'selected': ''%> >Bolivia</option>
+                <option value=3 <%= (locals.oldData && oldData.country === 'Chile')? 'selected': ''%> >Chile</option>
+                <option value=4 <%= (locals.oldData && oldData.country === 'Colombia')? 'selected': ''%> >Colombia</option>
+                <option value=5 <%= (locals.oldData && oldData.country === 'Ecuador')? 'selected': ''%> >Ecuador</option>
+                <option value=6 <%= (locals.oldData && oldData.country === 'Peru')? 'selected': ''%> >Perú</option>
+                <option value=7 <%= (locals.oldData && oldData.country === 'Uruguay')? 'selected': ''%> >Uruguay</option>
+                <option value=8 <%= (locals.oldData && oldData.country === 'Venezuela')? 'selected': ''%> >Venezuela</option>
             </select>
             <% if (locals.errors && errors.country) {%>
               <span class="errorMessage">
