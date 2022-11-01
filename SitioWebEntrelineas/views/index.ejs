@@ -10,37 +10,27 @@
   <div class="complete-conteiner">
   <main>
       <section class="product">
-
-        <% for (let i=0; i < categories.length; i++){%>
-          <h2 id="<% categories[i].name %>"><%= categories[i].name %></h2>
-          <% for (let j=0 ; j <= categories[i].products.length; j++){%>
-
+        
+          <% for (let i=0 ; i < categories.length; i++){%>
+            <h2><%= categories[i].name %></h2>
+            <% for (let j=0 ; j < categories[i].products.length ; j++){%>
             <article class="product-box">
               <div class="product-img"> 
-                <a href="products/detail/<%= products[j].id %>"><img src="images/products/<%=products[j].image%>" alt="<%=products[j].title %>"/></a>
+                <a href="products/detail/<%= categories[i].products[j].id %>"><img src="images/products/<%=categories[i].products[j].image%>" alt="<%=categories[i].products[j].title %>"/></a>
               </div>
               <div class="product-title">
-                <h4><%=products[j].title %></h4>
-                <span>$ <%=products[j].price %></span>
+                <h4><%= categories[i].products[j].title %></h4>
+                <span>$ <%= categories[i].products[j].price %></span>
               </div>            
             </article>
 
-
+            <% } %>
 
           <% } %>
-          
         
-        <% } %> 
-      
-      </section>
-
-    
-    
-
-    
+     </section>
 
   </main>
-
   <%- include('./partials/footer') %>
   </div>
 </body>

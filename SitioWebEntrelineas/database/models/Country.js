@@ -6,7 +6,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        name: dataTypes.STRING,
+        name: {
+            type: dataTypes.STRING
+        }
     };
     let config = {
         tableName: 'countries',
