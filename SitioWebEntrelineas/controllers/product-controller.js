@@ -58,7 +58,7 @@ const productController = {
     },
 
     destroy: (req, res)=>{
-        Products.fileByPk((req.params)) 
+        Products.findByPk((req.params)) 
         .then((libro)=>{
             if (libro.image !="default-image.jpg"){
                 fs.unlinkSync("./public/images/products/" + producto.img);
