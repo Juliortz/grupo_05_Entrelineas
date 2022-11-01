@@ -76,10 +76,8 @@ const productController = {
         Products.findByPk(req.params.id, {
             include: {association: "categories" }
         })
-        .then((libro)=>{
-            res.render("products/product-edition", {
-                libro:libro
-            })
+        .then((product)=>{
+            res.render("products/product-edition", {product})
         })
     }
 }
