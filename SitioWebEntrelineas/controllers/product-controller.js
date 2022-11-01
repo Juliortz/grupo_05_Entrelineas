@@ -19,10 +19,8 @@ const productController = {
         
         Topics.findAll()
         .then((topics)=> {
-            for(let i=0; i<topics.length; i++){
-                topicsArray.push(topics[i].dataValues.name)
-            } 
-            res.render("products/product-create-form", {topics: topicsArray})
+            
+            res.render("products/product-create-form", {topics})
         }) 
     },
     store: (req, res)=>{
@@ -40,8 +38,9 @@ const productController = {
             edition: req.body.edicion,
             pages: req.body.paginas,
             image: img,
-            lenguage: req.body.idioma,
+            language: req.body.idioma,
             presentation: req.body.presentacion,
+            
         })
 
         
@@ -60,7 +59,7 @@ const productController = {
     },
 
     destroy: (req, res)=>{
-        Products.findByPk((req.params)) 
+        Products.findByPk((req.params.id)) 
         .then((libro)=>{
             if (libro.image !="default-image.jpg"){
                 fs.unlinkSync("./public/images/products/" + producto.img);
@@ -79,6 +78,9 @@ const productController = {
         .then((product)=>{
             res.render("products/product-edition", {product})
         })
+    },
+    update: (req, res)=>{
+
     }
 }
 
