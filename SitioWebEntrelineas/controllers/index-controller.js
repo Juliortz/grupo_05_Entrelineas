@@ -11,27 +11,8 @@ const controller = {
     })
     .then((categories) => {
     return res.render('index', {categories})
-})
-}
-// const controller = {
-//    index: (req, res)=> {
-//     let promesProducts =  Products.findAll ()
-//     let promesCategories = Categories.findAll({
-//       include: ['products']
-//     })
-
-//     Promise.all([promesProducts, promesCategories])
-
-//     .then(([allProducts, allCategories])=>{
-      
-           
-//       return res.render('index',{products: allProducts, categories: allCategories})
-      
-  
-//      })
-
-//     }
-//   }
+    })
+  }
 }
 module.exports = controller;
 
