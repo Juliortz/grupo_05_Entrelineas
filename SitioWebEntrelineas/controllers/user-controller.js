@@ -42,7 +42,7 @@ const userController = {
                         last_name: req.body.last_name,
                         user_name: req.body.user,
                         email: req.body.email,
-                        password: bcrypt.hashSync(req.body.password.toString(), 10),
+                        password: bcrypt.hashSync(req.body.password, 10),
                         avatar: req.file.filename,
                         coutry_id: req.body.country,
                     })
@@ -55,14 +55,14 @@ const userController = {
     },
     logVerification: (req, res) => {
         usuario = req.body.email;
-        contrasenia = req.body.password
+        contrasenia = ('"'+req.body.password+ '"')
 
         Users.findOne({ where: { email: usuario } })
             //pregunto si existe el usuario a loguearse
             .then(user => {
                 if (user) {
                     
-                    let isConstraseniaOk = bcrypt.compareSync(contrasenia.toString(), user.password.toString());
+                    let isConstraseniaOk = bcrypt.compareSync(contrasenia, user.password);
                     console.log(isConstraseniaOk);
                     // si existe el usuario, pregunto si coincide con la contraseña
                     if (isConstraseniaOk) {
