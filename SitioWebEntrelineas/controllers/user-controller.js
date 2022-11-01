@@ -42,7 +42,7 @@ const userController = {
                         last_name: req.body.last_name,
                         user_name: req.body.user,
                         email: req.body.email,
-                        password: bcrypt.hashSync(req.body.password, 10),
+                        password: bcrypt.hashSync(req.body.password.toString(), 10),
                         avatar: req.file.filename,
                         coutry_id: req.body.country,
                     })
@@ -62,7 +62,7 @@ const userController = {
             .then(user => {
                 if (user) {
                     
-                    let isConstraseniaOk = bcrypt.compareSync(contrasenia, user.password);
+                    let isConstraseniaOk = bcrypt.compareSync(contrasenia.toString(), user.password.toString());
                     console.log(isConstraseniaOk);
                     // si existe el usuario, pregunto si coincide con la contraseña
                     if (isConstraseniaOk) {
