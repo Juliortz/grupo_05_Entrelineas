@@ -82,9 +82,9 @@
                 <h3>Ficha técnica:</h3>
                 <br/>
                 <label for="genero">Genero:</label>
-                  <select id="genero" name="genero">
+                  <select id="genero" name="topics" multiple>
                     <% for (let i=0; i<topics.length; i++ ){ %> 
-                      <option value="<%topics[i].id%>"><%=topics[i].name%></option>
+                      <option value="<%= topics[i].id %>"><%= topics[i].name %></option>
                     <% } %>   
                 </select>
                 <br/>

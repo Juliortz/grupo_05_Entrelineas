@@ -4,8 +4,10 @@ const sequelize = db.sequelize;
 const Topics = db.Topic;
 const Categories = db.Category;
 const Products = db.Product;
+const ProductsCategories = db.ProductCategory;
+const ProductsTopics = db.ProductTopic;
 let img= "";
-let topicsArray = [];
+
 
 const productController = {
     list: (req, res)=> {
@@ -24,6 +26,7 @@ const productController = {
         }) 
     },
     store: (req, res)=>{
+        
         if (req.file){
              img = req.file.filename;
         }
@@ -42,9 +45,30 @@ const productController = {
             presentation: req.body.presentacion,
             
         })
+        //Busco el id del ultimo producto creado
+        Products.findAll()
+            .then(function(products){
+                return products[(products.length-1)].id
+            })
+            //ingreso en la tabla product_category los registros del producto con las categorias asociadas
+            .then(function(id){
+                for (let i=0; i < req.body.categories.length; i++){
 
+                    ProductsCategories.create({
+                        product_id : (id + 1), //el id que me trae es el del ultimo producto anterior, por eso le sumo uno al nuevo producto
+                        category_id: req.body.categories[i]
+                    })
+                }
+                for (let j=0; j < req.body.topics.length; j++){
+                    ProductsTopics.create({
+                        product_id : (id + 1), //el id que me trae es el del ultimo producto anterior, por eso le sumo uno al nuevo producto
+                        topic_id: req.body.topics[j]
+                    })     
+                }
+            })
+            
         
-        res.redirect("/products")
+        return res.redirect("/products")
     },
     detail: (req, res) =>{
         Products.findByPk(req.params.id, {
@@ -53,16 +77,17 @@ const productController = {
         .then((libro)=>{
            
             res.render("products/product-detail", {
-                libro:libro
+             libro:libro
             })
         })
     },
 
     destroy: (req, res)=>{
         Products.findByPk((req.params.id)) 
-        .then((libro)=>{
-            if (libro.image !="default-image.jpg"){
-                fs.unlinkSync("./public/images/products/" + producto.img);
+        .then((product)=>{
+            
+            if (product.image !="default-image.jpg"){
+                fs.unlinkSync("./public/images/products/" + product.img);
                 console.log("Producto deleted successfull");
             }
         })
