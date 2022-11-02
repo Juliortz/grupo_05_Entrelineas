@@ -6,7 +6,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        name: dataTypes.STRING,
+        name: {
+            type: dataTypes.STRING
+        }
     };
     let config = {
         tableName: 'countries',
@@ -18,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
     Country.associate = function(models) {
         Country.hasMany(models.User,{
             as: 'users',
-            foreingKey: 'country_id'
+            foreignKey: 'country_id'
         })
     };
     return Country;

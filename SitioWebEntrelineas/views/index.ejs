@@ -2,56 +2,35 @@
 <html lang="en">
 <%- include('./partials/head') %>
 <body>
-  <!--si la vista recibe datos de un usuario logueado, incluye al header_login, sino al otro header, si no lo hago así, me marca error al entrar por primera vez al index sin datos de usuarios-->
-  <%  if(user){ %>
-    <%- include('./partials/header_login') %>
-<% }else{ %> 
+  
   <%- include('./partials/header') %>
- <%}%>
+ 
 
   <!-- div complete-conteiner para que pueda quedar fijo el header y el resto escrolea como una sola cosa, sino el footer quedaba descolgado -->
   <div class="complete-conteiner">
   <main>
       <section class="product">
-      <h2 id="novedades">Novedades</h2>
+        
+          <% for (let i=0 ; i < categories.length; i++){%>
+            <h2><%= categories[i].name %></h2>
+            <% for (let j=0 ; j < categories[i].products.length ; j++){%>
+            <article class="product-box">
+              <div class="product-img"> 
+                <a href="products/detail/<%= categories[i].products[j].id %>"><img src="images/products/<%=categories[i].products[j].image%>" alt="<%=categories[i].products[j].title %>"/></a>
+              </div>
+              <div class="product-title">
+                <h4><%= categories[i].products[j].title %></h4>
+                <span>$ <%= categories[i].products[j].price %></span>
+              </div>            
+            </article>
 
-        <% for (const product of novedades){ %>
-          <%- include('./partials/product-item', {product}) %>
+            <% } %>
 
-        <% } %>
-      </section>
-
-    <section class="product">
-      <h2 id="mas-vendidos">Más Vendidos</h2>
-
-      <% for (const product of masVendidos){ %>
-        <%- include('./partials/product-item', {product}) %>
-
-      <% } %>
-
-    </section>
-    <section class="product">
-      <h2 id="sagas">Sagas</h2>
-
-      <% for (const product of sagas){ %>
-        <%- include('./partials/product-item', {product}) %>
-
-      <% } %>
-
-    </section>
-
-    <section class="product">
-      <h2 id="packs">Packs</h2>
-
-      <% for (const product of packs){ %>
-        <%- include('./partials/product-item', {product}) %>
-
-      <% } %>
-
-    </section>
+          <% } %>
+        
+     </section>
 
   </main>
-
   <%- include('./partials/footer') %>
   </div>
 </body>

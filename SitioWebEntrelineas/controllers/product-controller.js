@@ -1,17 +1,89 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
+const Topics = db.Topic;
+const Categories = db.Category;
 const Products = db.Product;
+let img= "";
+let topicsArray = [];
 
 const productController = {
     list: (req, res)=> {
-        console.log(Products);
+        
         Products.findAll()
         .then(product => {
             res.render("products/products", {product})
         })
+    },
+    create:(req, res)=>{
+        
+        Topics.findAll()
+        .then((topics)=> {
+            
+            res.render("products/product-create-form", {topics})
+        }) 
+    },
+    store: (req, res)=>{
+        if (req.file){
+             img = req.file.filename;
+        }
+        else{
+             img = "default-image.jpg"
+        }
+        Products.create({
+            title: req.body.titulo,
+            author: req.body.autor,
+            synopsis: req.body.sinopsis,
+            price: req.body.precio,
+            edition: req.body.edicion,
+            pages: req.body.paginas,
+            image: img,
+            language: req.body.idioma,
+            presentation: req.body.presentacion,
+            
+        })
+
+        
+        res.redirect("/products")
+    },
+    detail: (req, res) =>{
+        Products.findByPk(req.params.id, {
+            include: {association: "categories" }
+        })
+        .then((libro)=>{
+           
+            res.render("products/product-detail", {
+                libro:libro
+            })
+        })
+    },
+
+    destroy: (req, res)=>{
+        Products.findByPk((req.params.id)) 
+        .then((libro)=>{
+            if (libro.image !="default-image.jpg"){
+                fs.unlinkSync("./public/images/products/" + producto.img);
+                console.log("Producto deleted successfull");
+            }
+        })
+        Products.destroy({
+            where: {id: req.params.id}
+        })
+        res.redirect("/products")
+    },
+    edit: (req, res)=>{
+        Products.findByPk(req.params.id, {
+            include: {association: "categories" }
+        })
+        .then((product)=>{
+            res.render("products/product-edition", {product})
+        })
+    },
+    update: (req, res)=>{
+
     }
 }
+
 
 module.exports = productController
 

@@ -81,8 +81,15 @@
                 <br/>
                 <h3>Ficha técnica:</h3>
                 <br/>
+                <label for="genero">Genero:</label>
+                  <select id="genero" name="genero">
+                    <% for (let i=0; i<topics.length; i++ ){ %> 
+                      <option value="<%topics[i].id%>"><%=topics[i].name%></option>
+                    <% } %>   
+                </select>
+                <br/>
                 <label for="edicion">Edición:</label>
-                <input type="number" name="edicion" id="edicion"/>
+                <input type="se" name="edicion" id="edicion"/>
                 <br/>
                 <label for="paginas">Páginas:</label>
                 <input type="number" name="paginas" id="paginas"/>
@@ -95,13 +102,13 @@
                 <br/>
                 <div class="checkbox-box">
                   <label for="novedades">Novedades</label>
-                  <input type="checkbox" name="novedades" value="novedades" id="novedades">
+                  <input type="checkbox" name="categories" value="1" id="novedades">
                   <label for="masVendidos">| Más Vendidos</label>
-                  <input type="checkbox" name="masVendidos" value="masVendidos" id="masVendidos">
+                  <input type="checkbox" name="categories" value="2" id="masVendidos">
                   <label for="sagas">| Sagas</label>
-                  <input type="checkbox" name="sagas" value="sagas" id="sagas">
+                  <input type="checkbox" name="categories" value="3" id="sagas">
                   <label for="packs">| Packs</label>
-                  <input type="checkbox" name="packs" value="packs" id="packs">
+                  <input type="checkbox" name="categories" value="4" id="packs">
                 </div>
                 <br/>
                 <button type="submit" value="add">Agregar producto</button>

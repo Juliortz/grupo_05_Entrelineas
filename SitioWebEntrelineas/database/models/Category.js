@@ -6,7 +6,9 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        name: dataTypes.STRING,
+        name: {
+            type: dataTypes.STRING,
+        }
     };
     let config = {
         tableName: 'categories',
@@ -19,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
         Category.belongsToMany(models.Product, {
             as: 'products',
             through: 'product_category',
-            foreingKey: 'category_id',
+            foreignKey: 'category_id',
             otherKey: 'product_id',
             timestamps: false,
         })
