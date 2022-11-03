@@ -44,7 +44,7 @@ const userController = {
                         email: req.body.email,
                         password: bcrypt.hashSync(req.body.password, 10),
                         avatar: req.file.filename,
-                        coutry_id: req.body.country,
+                        country_id: req.body.country,
                     })
                     return res.redirect('../users/login');
                 }
@@ -54,22 +54,23 @@ const userController = {
         res.render('users/login');
     },
     logVerification: (req, res) => {
-        usuario = req.body.email;
-        contrasenia = ('"'+req.body.password+ '"')
+        let usuario = req.body.email;
+        
 
         Users.findOne({ where: { email: usuario } })
             //pregunto si existe el usuario a loguearse
             .then(user => {
                 if (user) {
                     
-                    let isConstraseniaOk = bcrypt.compareSync(contrasenia, user.password);
-                    console.log(isConstraseniaOk);
+                    let isConstraseniaOk = bcrypt.compareSync(req.body.password, user.password);
+                    
                     // si existe el usuario, pregunto si coincide con la contraseña
                     if (isConstraseniaOk) {
                         //con el delete borro la contraseña para que no quede guardada en la session por seguridad
-                        contrasenia = '';
+                        delete user.password;
                         //le asigno al req.session (el userLogged es una propiedad del session) los datos del usuario que se está logueando
-                        req.session.userLogged = usuario;
+                        req.session.userLogged = user;
+                        
                         //el req.session.userLogged queda disponible para todas las vistas
                         if (req.body.remindMe) {
                             res.cookie('perfil', req.body.email, { maxAge: (1000 * 60) * 60 })
