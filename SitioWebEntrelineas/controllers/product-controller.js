@@ -25,15 +25,15 @@ const productController = {
             res.render("products/product-create-form", {topics})
         }) 
     },
-    store: (req, res)=>{
-        
+    store: async function (req, res) {
+        try{
         if (req.file){
              img = req.file.filename;
         }
         else{
              img = "default-image.jpg"
         }
-        Products.create({
+        await Products.create({
             title: req.body.titulo,
             author: req.body.autor,
             synopsis: req.body.sinopsis,
@@ -46,27 +46,28 @@ const productController = {
             
         })
         //Busco el id del ultimo producto creado
-        Products.findAll()
-            .then(function(products){
-                return products[(products.length-1)].id
-            })
+        let products = await Products.findAll()
+        let ultimoId = await products[(products.length - 1)].id
+            
             //ingreso en la tabla product_category los registros del producto con las categorias asociadas
-            .then(function(id){
+            
                 for (let i=0; i < req.body.categories.length; i++){
 
                     ProductsCategories.create({
-                        product_id : (id + 1), //el id que me trae es el del ultimo producto anterior, por eso le sumo uno al nuevo producto
+                        product_id : ultimoId, 
                         category_id: req.body.categories[i]
                     })
                 }
                 for (let j=0; j < req.body.topics.length; j++){
                     ProductsTopics.create({
-                        product_id : (id + 1), //el id que me trae es el del ultimo producto anterior, por eso le sumo uno al nuevo producto
+                        product_id : ultimoId, 
                         topic_id: req.body.topics[j]
                     })     
                 }
-            })
             
+        }catch (error) {
+            console.log(error);
+            }   
         
         return res.redirect("/products")
     },
@@ -82,101 +83,84 @@ const productController = {
         })
     },
 
-    destroy: (req, res)=>{
-        Products.findByPk((req.params.id)) 
-        .then((product)=>{
+    destroy:  async function (req, res)  {
+        try{
+            await Products.findByPk((req.params.id)) 
+
+            await ProductsCategories.destroy({
+                    where: {product_id: req.params.id}
+                })
             
-            if (product.image !="default-image.jpg"){
-                fs.unlinkSync("./public/images/products/" + product.img);
-                console.log("Producto deleted successfull");
-            }
-        })
-        Products.destroy({
-            where: {id: req.params.id}
-        })
+            await ProductsTopics.destroy({
+                    where: {product_id: req.params.id}
+                })     
+
+            await Products.destroy({
+                where: {id: req.params.id}
+            })
+        }catch (error) {
+        console.log(error);
+        }
         res.redirect("/products")
     },
     edit: (req, res)=>{
         Products.findByPk(req.params.id, {
-            include: {association: "categories" }
+            include: [
+                {association: "categories" },
+                {association: "topics"}
+            ]
         })
         .then((product)=>{
             res.render("products/product-edition", {product})
         })
     },
-    update: (req, res)=>{
+    update: async function (req, res) {
+        try {
+          const oldCategories = await ProductsCategories.destroy({
+            where: {product_id : req.params.id}
+          })
+          const oldTopics = await ProductsTopics.destroy({
+            where: {product_id: req.params.id}
+          })  
+          const newMovie = await Products.update(
+            {
+              title: req.body.titulo,
+              author: req.body.autor,
+              sinopsis: req.body.sinopsis,
+              price: req.body.precio,
+              edition: req.body.edicion,
+              pages: req.body.paginas,
+              language: req.body.idioma,
+              presentation: req.body.presentacion,
+              image: req.file.filename
+            },
+            {
+              where: {
+                id: req.params.id,
+              },
+            }
+            
+            );
+           
+          for (let i=0; i < req.body.categories.length; i++){
 
-    }
+            await ProductsCategories.create({
+                product_id : req.params.id,
+                category_id: req.body.categories[i]
+            })
+        }
+          for (let j=0; j < req.body.topics.length; j++){
+            await ProductsTopics.create({
+                product_id : req.params.id,
+                topic_id: req.body.topics[j]
+            })     
+        }
+          res.redirect("/products");
+        } catch (error) {
+          console.log(error);
+        }
+      },
 }
 
 
 module.exports = productController
-
-// const moviesController = {
-//     list: (req, res) => {
-//         db.Movie.findAll()
-//             .then(movies => {
-//                 res.render('moviesList.ejs', {movies})
-//             })
-//     },
-//     detail: (req, res) => {
-//         db.Movie.findByPk(req.params.id)
-//             .then(movie => {
-//                 res.render('moviesDetail.ejs', {movie});
-//             });
-//     },
-//     new: (req, res) => {
-//         db.Movie.findAll({
-//             order : [
-//                 ['release_date', 'DESC']
-//             ],
-//             limit: 5
-//         })
-//             .then(movies => {
-//                 res.render('newestMovies', {movies});
-//             });
-//     },
-//     recomended: (req, res) => {
-//         db.Movie.findAll({
-//             where: {
-//                 rating: {[db.Sequelize.Op.gte] : 8}
-//             },
-//             order: [
-//                 ['rating', 'DESC']
-//             ]
-//         })
-//             .then(movies => {
-//                 res.render('recommendedMovies.ejs', {movies});
-//             });
-//     }, //Aqui debemos modificar y completar lo necesario para trabajar con el CRUD
-//     add: function (req, res) {
-//         res.render('/moviesAdd')   
-//     },
-//     create: async function (req, res) {
-//         try {
-//             const newMovie = await db.Movie.create({
-//                 title: req.body.title,
-//                 rating: req.body.rating,
-//                 length: req.body.length,
-//                 awards: req.body.awards,
-//                 release_date: req.body.release_date,
-//             });
-//             console.log(newMovie);
-//             res.redirect('/movies');
-//         } catch (e) {
-//             console.log(e);
-//     }},
-//     edit: function(req, res) {
-//         // TODO
-//     },
-//     update: function (req,res) {
-//         // TODO
-//     },
-//     delete: function (req, res) {
-//         // TODO
-//     },
-//     destroy: function (req, res) {
-//         // TODO
-//     }
-
-// }

@@ -96,34 +96,92 @@
 
               <div class="checkbox-box">
                 <label for="novedades">Novedades</label>
-                <input type="checkbox" name="novedades" value="1" id="novedades" <% product.categories.forEach((categoria) => { %>
+                <input type="checkbox" name="categories" value="1" id="novedades" <% product.categories.forEach((categoria) => { %>
                   <% if (categoria.id == 1){ %>
                     <%= 'checked' %>
                  <% } %>
                 <% }) %>>
                 
                 <label for="masVendidos">| Más Vendidos</label>
-                <input type="checkbox" name="masVendidos" value="2" id="masVendidos" <% product.categories.forEach((categoria) => { %>
+                <input type="checkbox" name="categories" value="2" id="masVendidos" <% product.categories.forEach((categoria) => { %>
                   <% if (categoria.id == 2){ %>
                     <%= 'checked' %>
                  <% } %>
                 <% }) %>>
 
                 <label for="sagas">| Sagas</label>
-                <input type="checkbox" name="sagas" value="3" id="sagas" <% product.categories.forEach((categoria) => { %>
+                <input type="checkbox" name="categories" value="3" id="sagas" <% product.categories.forEach((categoria) => { %>
                   <% if (categoria.id == 3){ %>
                     <%= 'checked' %>
                  <% } %>
                 <% }) %>>
 
                 <label for="packs">| Packs</label>
-                <input type="checkbox" name="packs" value="4" id="packs" <% product.categories.forEach((categoria) => { %>
+                <input type="checkbox" name="categories" value="4" id="packs" <% product.categories.forEach((categoria) => { %>
                   <% if (categoria.id == 4){ %>
                     <%= 'checked' %>
                  <% } %>
                 <% }) %>>
 
               </div>
+              <div class="check">
+                <p>Género Literario:<p>
+                  <label for="fant"><input type="checkbox" name="topics" value="1"  id="fant" <% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 1){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Fantasía</label><br/>
+                  <label for="hist"><input type="checkbox" name="topics" value="2" id="hist"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 2){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Historia</label><br/>
+                  <label for="cien"><input type="checkbox" name="topics" value="3" id="cien"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 3){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Ciencia ficción</label><br/>
+                  <label for="roma"><input type="checkbox" name="topics" value="4" id="roma"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 4){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Romance</label><br/>
+                  <label for="polit"><input type="checkbox" name="topics" value="5" id="polit"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 5){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Política</label><br/>
+                  <label for="dram"><input type="checkbox" name="topics" value="6" id="dram"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 6){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Drama</label><br/>
+                  <label for="polic"><input type="checkbox" name="topics" value="7" id="polic"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 7){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Policial</label><br/>
+                  <label for="econ"><input type="checkbox" name="topics" value="8" id="econ"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 8){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Economía</label><br/>
+                  <label for="terr"><input type="checkbox" name="topics" value="9" id="terr"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 9){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Terror</label><br/>
+                  <label for="susp"><input type="checkbox" name="topics" value="10" id="susp"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 10){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Suspenso</label><br/>
+                  <label for="auto"><input type="checkbox" name="topics" value="11" id="auto"<% product.topics.forEach((topic) => { %>
+                    <% if (topic.id == 11){ %>
+                      <%= 'checked' %>
+                   <% } %>
+                  <% }) %>>Autoayuda</label><br/>
+                </div>
                 <button type="submit" value="save">Guardar cambios</button>
             </form>
         </div>

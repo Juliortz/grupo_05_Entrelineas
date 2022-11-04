@@ -27,7 +27,7 @@ router.get('/', productController.list);
 router.get('/detail/:id', productController.detail);
 
 router.get('/edit/:id', productController.edit);
-//router.put('/edit/:id', upload.single('imagenProducto'), productController.update)
+router.put('/edit/:id', upload.single('imagenProducto'), productController.update)
 
 // router.get('/cart', productController.cart);
 
