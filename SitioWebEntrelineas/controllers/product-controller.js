@@ -122,7 +122,7 @@ const productController = {
           const oldTopics = await ProductsTopics.destroy({
             where: {product_id: req.params.id}
           })  
-          const newMovie = await Products.update(
+          const newProducts = await Products.update(
             {
               title: req.body.titulo,
               author: req.body.autor,
