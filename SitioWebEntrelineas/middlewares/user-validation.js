@@ -11,7 +11,7 @@ const validateRegister = [
         if (!file) {
             throw new Error('¡Tienes que subir una imagen!');
         }else{
-            let acceptedExtensions = ['.jpg', '.png'];
+            let acceptedExtensions = ['.jpg','.jpeg','.png','.gif'];
             let fileExtension = path.extname(file.originalname);
             if(!acceptedExtensions.includes(fileExtension)){
                 throw new Error('¡Solo pueden ser archivos «.jpg» o «.png»!')

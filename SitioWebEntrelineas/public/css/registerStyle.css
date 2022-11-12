@@ -93,6 +93,15 @@ main h2{
     text-align: center;
     padding: 0px 10px;
 }
+.error {
+    border-color: red;
+}
+.visible {
+    display: block;
+}
+.invisible {
+    display: none;
+}
 div.register-form {
     opacity: 1;
     display: flex;
