@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { validationResult } = require('express-validator');
 
 const Topics = db.Topic;
 const Categories = db.Category;
@@ -18,7 +19,7 @@ const productController = {
         })
     },
     create:(req, res)=>{
-        
+
         Topics.findAll()
         .then((topics)=> {
             
@@ -26,7 +27,14 @@ const productController = {
         }) 
     },
     store: async function (req, res) {
+
         try{
+        const errores = validationResult(req)
+        if(errores.errors.length > 0){
+            return res.render('products/product-create-form', {errors: errores.mapped(), oldData: req.body})
+
+        }
+
         if (req.file){
              img = req.file.filename;
         }
@@ -68,6 +76,7 @@ const productController = {
         }catch (error) {
             console.log(error);
             }   
+             
         
         return res.redirect("/products")
     },
@@ -115,7 +124,13 @@ const productController = {
         })
     },
     update: async function (req, res) {
+
         try {
+            const errores = validationResult(req)
+            if(errores.errors.length > 0){
+            return res.render('products/product-create-form', {errors: errores.mapped(), oldData: req.body})
+
+        }
           const oldCategories = await ProductsCategories.destroy({
             where: {product_id : req.params.id}
           })

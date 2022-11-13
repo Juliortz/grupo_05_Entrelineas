@@ -3,6 +3,7 @@ const { body } =  require('express-validator');
 
 const validateRegister = [
     body('first_name').notEmpty().withMessage('¡Hey, debes escribir tu nombre!').bail()
+    .isLength({min: 2}).withMessage('¡Debe tener al menos dos caracteres!').bail()
     .isString().withMessage('¡Solo letras, eh!'),
     body('last_name').notEmpty().withMessage('¡Hey, debes escribir tu apellido!').bail()
     .isString().withMessage('¡Solo letras, eh!'),
@@ -11,10 +12,10 @@ const validateRegister = [
         if (!file) {
             throw new Error('¡Tienes que subir una imagen!');
         }else{
-            let acceptedExtensions = ['.jpg', '.png'];
+            let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
             let fileExtension = path.extname(file.originalname);
             if(!acceptedExtensions.includes(fileExtension)){
-                throw new Error('¡Solo pueden ser archivos «.jpg» o «.png»!')
+                throw new Error('¡Solo pueden ser archivos «.jpg», «.jpeg», «.png» o «.gif»!')
             }
         }  
         return true; 
@@ -25,7 +26,7 @@ const validateRegister = [
     body('email').notEmpty().withMessage('¡Olvidaste escribir un email!').bail()
     .isEmail().withMessage('¡Tiene que ser un email válido!'),
     body('password').notEmpty().withMessage('¡Olvidaste escribir una contraseña!').bail()
-    .isLength({min: 6}).withMessage('¡Debe tener al menos seis caracteres!'),
+    .isLength({min: 8}).withMessage('¡Debe tener al menos ocho caracteres!'),
     body('country').notEmpty().withMessage('¡Debes seleccionar un país!')
 ];
 

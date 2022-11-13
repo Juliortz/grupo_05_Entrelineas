@@ -65,40 +65,98 @@
         <div class="register-form">
             <form action="/products/create" method="post" enctype="multipart/form-data">
                 <label for="titulo">Título:</label>
-                <input type="text" name="titulo" id="titulo"/>
+                <input type="text" name="titulo" value="<%= locals.oldData ? oldData.titulo : null %>" id="titulo"/>
+                <% if (locals.errors && errors.titulo) {%>
+                  <span class="errorMessage">
+                      <%= errors.titulo.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <label for="autor">Autor:</label>
-                <input type="text" name="autor" id="autor"/>
+                <input type="text" name="autor" value="<%= locals.oldData ? oldData.autor : null %>" id="autor"/>
+                <% if (locals.errors && errors.autor) {%>
+                  <span class="errorMessage">
+                      <%= errors.autor.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <label for="sinopsis">Sinopsis:</label><br/>
-                <textarea type="text" name="sinopsis" id="sinopsis" placeholder="Resumen del libro..."></textarea>
+                <textarea type="text" name="sinopsis" value="<%= locals.oldData ? oldData.sinopsis : null %>" id="sinopsis" placeholder="Resumen del libro..."></textarea>
+                <% if (locals.errors && errors.sinopsis) {%>
+                  <span class="errorMessage">
+                      <%= errors.sinopsis.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <label for="precio">Precio:</label>
-                <input type="number" name="precio" id="precio"/>
+                <input type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" id="precio"/>
+                <% if (locals.errors && errors.precio) {%>
+                  <span class="errorMessage">
+                      <%= errors.precio.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <label for="imagenProducto">Imagen del producto:</label>
-                <input type="file" name="imagenProducto" id="imagenProducto" accept=".jpg">
+                <input type="file" name="imagenProducto" value="<%= locals.oldData ? oldData.imagenProducto : null %>" id="imagenProducto">
+                <% if (locals.errors && errors.imagenProducto) {%>
+                  <span class="errorMessage">
+                      <%= errors.imagenProducto.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <h3>Ficha técnica:</h3>
                 <br/>
-                <label for="genero">Genero:</label>
-                  <select id="genero" name="topics" multiple>
-                    <% for (let i=0; i<topics.length; i++ ){ %> 
-                      <option value="<%= topics[i].id %>"><%= topics[i].name %></option>
-                    <% } %>   
-                </select>
+                <div class="check">
+                  <p>Género:<p>
+                    <label for="fant"><input type="checkbox" name="genlit" value="Fantasía" id="fant" >Fantasía</label><br/>
+                    <label for="hist"><input type="checkbox" name="genlit" value="Historia" id="hist">Historia</label><br/>
+                    <label for="cien"><input type="checkbox" name="genlit" value="Ciencia ficción" id="cien">Ciencia ficción</label><br/>
+                    <label for="roma"><input type="checkbox" name="genlit" value="Romance" id="roma">Romance</label><br/>
+                    <label for="polit"><input type="checkbox" name="genlit" value="Política" id="polit">Política</label><br/>
+                    <label for="dram"><input type="checkbox" name="genlit" value="Drama" id="dram">Drama</label><br/>
+                    <label for="polic"><input type="checkbox" name="genlit" value="Policial" id="polic">Policial</label><br/>
+                    <label for="econ"><input type="checkbox" name="genlit" value="Economía" id="econ">Economía</label><br/>
+                    <label for="terr"><input type="checkbox" name="genlit" value="Terror" id="terr">Terror</label><br/>
+                    <label for="susp"><input type="checkbox" name="genlit" value="Suspenso" id="susp">Suspenso</label><br/>
+                    <label for="auto"><input type="checkbox" name="genlit" value="Autoayuda" id="auto">Autoayuda</label><br/>
+                    <% if (locals.errors && errors.genlit) {%>
+                      <span class="errorMessage">
+                          <%= errors.genlit.msg %>
+                      </span>
+                    <%}%>
+                  </div>
                 <br/>
                 <label for="edicion">Edición:</label>
-                <input type="se" name="edicion" id="edicion"/>
+                <input type="number" name="edicion" value="<%= locals.oldData ? oldData.edicion : null %>" id="edicion"/>
+                <% if (locals.errors && errors.edicion) {%>
+                  <span class="errorMessage">
+                      <%= errors.edicion.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <label for="paginas">Páginas:</label>
-                <input type="number" name="paginas" id="paginas"/>
+                <input type="number" name="paginas" value="<%= locals.oldData ? oldData.paginas : null %>" id="paginas"/>
+                <% if (locals.errors && errors.paginas) {%>
+                  <span class="errorMessage">
+                      <%= errors.paginas.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <label for="idioma">Idioma:</label>
-                <input type="text" name="idioma" id="idioma"/>
+                <input type="text" name="idioma" value="<%= locals.oldData ? oldData.idioma : null %>" id="idioma"/>
+                <% if (locals.errors && errors.idioma) {%>
+                  <span class="errorMessage">
+                      <%= errors.idioma.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <label for="presentacion">Presentación:</label>
-                <input type="text" name="presentacion" id="presentacion"/>
+                <input type="text" name="presentacion" value="<%= locals.oldData ? oldData.presentacion : null %>" id="presentacion"/>
+                <% if (locals.errors && errors.presentacion) {%>
+                  <span class="errorMessage">
+                      <%= errors.presentacion.msg %>
+                  </span>
+                <%}%>
                 <br/>
                 <div class="checkbox-box">
                   <label for="novedades">Novedades</label>
