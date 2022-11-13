@@ -126,3 +126,28 @@ DEJAR DE HACER:
 Desmotivarse. La motivación es un factor determinante al momento de trabajar, debido a que esto se ve reflejado en los resultados. Si todas las partes quieren hacer bien su trabajo y ese esfuerzo les es reconocido, todo marchará por el buen camino. Una buena actitud facilitará las cosas al momento de plantear ideas, conciliar visiones y solventar problemas. 
 
 
+RETROSPECTIVA - ACTUALIZACIÓN 5
+
+
+SEGUIR HACIENDO:
+
+Las palabras claves son autoevaluaciones y reuniones. No hay mejor manera de ser eficiente con y para el equipo, que siendo honesto consigo mismo y con el resto, reconociendo carencias y fortalezas individuales y grupales y trabajando en consonancia. Es acá donde las primeras cobran especial importancia y también las segundas, en lo que se refiere a comunicar al resto y seguir trazando un plan de trabajo conjunto. 
+
+HACER MÁS:
+
+Trabajo en equipo. Uno para todos y todos para uno. La fortaleza del trabajo conjunto no solo está en aceptar la pluralidad de pensamientos, ideas o visiones, sino también en el apoyo brindado y recibido, y en la confianza mutua forjada, lo cual se ve reflejado en el buen desempeño dado al finalizar el sprint. 
+
+EMPEZAR A HACER:
+
+No limitarse en cuanto a la búsqueda, obtención y utilización de recursos y conocimientos, y es acá donde internet juega un papel crucial, ya que se ha establecido como una fuente casi inagotable de información completa, detallada, veraz y actualizada, en la cual podemos apoyarnos a la hora de resolver problemas.
+
+HACER MENOS:
+
+Desmotivarse. Parece increíble, pero muchas veces es en la recta final cuando afloran las inseguridades, frustraciones, miedos y demás, y todos estos problemas fácilmente pueden desembocar en desmotivación, que a su vez sigue causando y acrecentando males como los previamente mencionados, originando un círculo vicioso de improductividad que finalmente, lleva al fracaso.  Mantener siempre una buena actitud y ser comprensivo con uno mismo y con el resto del equipo evitará que este problema se establezca. 
+
+DEJAR DE HACER:
+
+Procrastinar. Sí, la procrastinación sigue siendo el enemigo número uno a vencer y quizás tenga que ver con el punto anterior (el de la desmotivación) o que simplemente, atrapados como estamos en nuestro día a día, no somos capaces de organizarnos y planificarnos, subestimamos las tareas pendientes y elucubramos cualquier cantidad de excusas ante un tiempo que se agota y que no alcanza para resolver los problemas o reveses que puedan aparecer. Haz hoy, lo que podrías hacer mañana, pero hazlo con calma. Si luego sobra el tiempo… pues, mejor. 
+
+
+
