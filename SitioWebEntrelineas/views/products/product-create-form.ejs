@@ -85,6 +85,7 @@
                 <br/>
                 <label for="sinopsis">Sinopsis:</label><br/>
                 <textarea type="text" name="sinopsis" value="<%= locals.oldData ? oldData.sinopsis : null %>" id="sinopsis" placeholder="Resumen del libro..."></textarea>
+                <span class="errorMessage invisible" id="spanSinopsis">¡Hey, debes escribir una descripcion del libro!</span>
                 <% if (locals.errors && errors.sinopsis) {%>
                   <span class="errorMessage">
                       <%= errors.sinopsis.msg %>
@@ -93,6 +94,7 @@
                 <br/>
                 <label for="precio">Precio:</label>
                 <input type="number" name="precio" value="<%= locals.oldData ? oldData.precio : null %>" id="precio"/>
+                <span class="errorMessage invisible" id="spanPrecio">¡Hey, debes escribir un precio de 2 a 5 cifras!</span>
                 <% if (locals.errors && errors.precio) {%>
                   <span class="errorMessage">
                       <%= errors.precio.msg %>
@@ -131,6 +133,7 @@
                 <br/>
                 <label for="edicion">Edición:</label>
                 <input type="number" name="edicion" value="<%= locals.oldData ? oldData.edicion : null %>" id="edicion"/>
+                <span class="errorMessage invisible" id="spanEdicion">¡Hey, ¿Que edicion es el libro?!</span>
                 <% if (locals.errors && errors.edicion) {%>
                   <span class="errorMessage">
                       <%= errors.edicion.msg %>
@@ -139,6 +142,7 @@
                 <br/>
                 <label for="paginas">Páginas:</label>
                 <input type="number" name="paginas" value="<%= locals.oldData ? oldData.paginas : null %>" id="paginas"/>
+                <span class="errorMessage invisible" id="spanPaginas">¡Hey, ¿Cuantas paginas tiene el libro?!</span>
                 <% if (locals.errors && errors.paginas) {%>
                   <span class="errorMessage">
                       <%= errors.paginas.msg %>
@@ -147,6 +151,7 @@
                 <br/>
                 <label for="idioma">Idioma:</label>
                 <input type="text" name="idioma" value="<%= locals.oldData ? oldData.idioma : null %>" id="idioma"/>
+                <span class="errorMessage invisible" id="spanIdioma">¡Hey, ¿Cual es el idioma del libro?!</span>
                 <% if (locals.errors && errors.idioma) {%>
                   <span class="errorMessage">
                       <%= errors.idioma.msg %>
@@ -155,6 +160,7 @@
                 <br/>
                 <label for="presentacion">Presentación:</label>
                 <input type="text" name="presentacion" value="<%= locals.oldData ? oldData.presentacion : null %>" id="presentacion"/>
+                <span class="errorMessage invisible" id="spanPresentacion">¡Hey, ¿Cual es la precentacion del libro?!</span>
                 <% if (locals.errors && errors.presentacion) {%>
                   <span class="errorMessage">
                       <%= errors.presentacion.msg %>
