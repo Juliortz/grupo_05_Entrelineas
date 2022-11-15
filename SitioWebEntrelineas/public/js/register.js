@@ -1,15 +1,15 @@
 window.addEventListener('load', function(){
 let formulario = document.querySelector('form');
 let campoNombre = document.querySelector('#first_name');
-let spanName = document.querySelector('#spanName');
+let spanName = document.querySelector('#span--first_name');
 let campoApellido = document.querySelector('#last_name');
-let spanApellido = document.querySelector('#spanApellido');
+let spanApellido = document.querySelector('#span--last_name');
 let campoUsuario = document.querySelector('#user');
-let spanUser = document.querySelector('#spanuser');
+let spanUser = document.querySelector('#span--user');
 let campoEmail = document.querySelector('#email');
-let spanEmail = document.querySelector('#spanEmail');
+let spanEmail = document.querySelector('#span--email');
 let campoContrasenia = document.querySelector('#password');
-let spanPassword = document.querySelector('#spanPassword');
+let spanPassword = document.querySelector('#span--password');
 
 
 const expresiones = {
