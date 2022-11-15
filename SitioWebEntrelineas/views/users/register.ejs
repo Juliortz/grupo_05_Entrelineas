@@ -68,7 +68,7 @@
             <br>
             <label for="password">Contraseña:</label><br/>
             <input type="password" name="password" id="password"/>
-            <span class="errorMessage invisible" id="spanPassword">¡La contraseña debe tener entre 6 y 12 caracteres!</span>
+            <span class="errorMessage invisible" id="spanPassword">¡La contraseña debe tener mínimo 8 caracteres!</span>
             <% if (locals.errors && errors.password) {%>
               <span class="errorMessage">
                   <%= errors.password.msg %>

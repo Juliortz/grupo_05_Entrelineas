@@ -15,7 +15,7 @@ let spanPassword = document.querySelector('#spanPassword');
 const expresiones = {
 	user: /^[a-zA-Z0-9\_\-]{5,10}$/, // Letras, numeros, guion y guion_bajo
 	name: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{6,12}$/, // 6 a 12 digitos.
+	password: /^.{8,12}$/, // 8 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	
 }

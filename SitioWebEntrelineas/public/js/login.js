@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
     
     
     const expresiones = {
-        password: /^.{6,12}$/, // 6 a 12 digitos.
+        password: /^.{8,12}$/, // 8 a 12 digitos.
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         
     }
