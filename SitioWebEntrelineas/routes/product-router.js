@@ -21,9 +21,11 @@ var storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const productController = require('../controllers/product-controller');
+// Agregue el require del nuevo controlador por API:
+const productApiController = require('../controllers/api-product-controller');
 
 
-router.get('/', productController.list);
+router.get('/', productApiController.list);
 
  router.get('/create', productController.create);
  router.post('/create', upload.single('imagenProducto'), validationProductCreate, productController.store);
