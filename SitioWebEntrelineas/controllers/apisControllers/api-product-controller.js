@@ -1,4 +1,4 @@
-const db = require('../database/models');
+const db = require('../../database/models');
 const sequelize = db.sequelize;
 
 const Topics = db.Topic;
@@ -8,15 +8,16 @@ const ProductsCategories = db.ProductCategory;
 const ProductsTopics = db.ProductTopic;
 let img= "";
 
-const productApiController = {
+const apiProductController = {
     list: (req, res)=> {
         
-        Products.findAll()
-        .then(products => {
+        Categories.findAll({
+            include: [{association: "products" }]
+        })
+        .then(categories => {
             return res.status(200).json({
-                total: products.lenght,
-             //   totalByCategory: ???,
-                data: products,
+                total: categories.length,
+                data: categories,
                 status: 200
 
             })
@@ -40,5 +41,5 @@ const productApiController = {
     },
 }
 
-module.exports = productApiController
+module.exports = apiProductController
 

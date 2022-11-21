@@ -4,6 +4,8 @@ const path = require('path');
 const indexRouter = require('./routes/index-router');
 const productRouter = require('./routes/product-router');
 const userRouter = require('./routes/user-router');
+const apiProductRouter = require('./routes/apisRoutes/api-product-router');
+const apiUserRouter = require('./routes/apisRoutes/api-user-router');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -27,6 +29,8 @@ app.set('view engine', 'ejs');
 app.use('/', indexRouter);
 app.use('/users', userRouter);
 app.use('/products', productRouter);
+app.use('/api/products', apiProductRouter);
+app.use('api/users', apiUserRouter);
 
 app.listen(3000, ()=> {
   console.log('Servidor funcionando en puerto 3000')
