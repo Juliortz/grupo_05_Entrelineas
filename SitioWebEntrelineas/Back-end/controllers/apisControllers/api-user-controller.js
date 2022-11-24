@@ -24,7 +24,7 @@ const apiUserController = {
             association: "products" }
         })
         .then((product)=>{
-           
+        
            return res.status(200).json({
                 data: product,
                 status: 200,
