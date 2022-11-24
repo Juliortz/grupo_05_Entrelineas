@@ -30,7 +30,7 @@ app.use('/', indexRouter);
 app.use('/users', userRouter);
 app.use('/products', productRouter);
 app.use('/api/products', apiProductRouter);
-app.use('api/users', apiUserRouter);
+app.use('/api/users', apiUserRouter);
 
 app.listen(3000, ()=> {
   console.log('Servidor funcionando en puerto 3000')
