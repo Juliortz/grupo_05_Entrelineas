@@ -7,7 +7,7 @@ let img= "";
 
 const apiUserController = {
     list: (req, res)=> {
-        Users.findAll()
+        Users.findAll({attributes:{exclude:['password']}})
         .then(user => {
             return res.status(200).json({
                 total: user.length,
@@ -18,15 +18,15 @@ const apiUserController = {
     },
 
     detail: (req, res)=> {
-        Users.findByPk(req.params.id, {
+        Users.findByPk(req.params.id, {attributes:{
             include: {association: "countries",
             association: "topics",
-            association: "products" }
-        })
-        .then((product)=>{
-        
+            association: "products"},
+            },attributes: {exclude:['password']}})
+        .then((users)=>{
+            console.log(users)
            return res.status(200).json({
-                data: product,
+                data: users,
                 status: 200,
             })
         })
