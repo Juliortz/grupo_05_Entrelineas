@@ -18,11 +18,11 @@ const apiUserController = {
     },
 
     detail: (req, res)=> {
-        Users.findByPk(req.params.id, {attributes:{
-            include: {association: "countries",
-            association: "topics",
-            association: "products"},
-            },attributes: {exclude:['password']}})
+        Users.findByPk(req.params.id,{
+            include:{association: "countries"},
+            include:{association: "topics"},
+            include:{association: "products"},
+            attributes: {exclude:['password']}})
         .then((users)=>{
             console.log(users)
            return res.status(200).json({
