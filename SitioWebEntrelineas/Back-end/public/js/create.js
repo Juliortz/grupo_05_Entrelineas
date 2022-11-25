@@ -19,7 +19,7 @@ window.addEventListener('load', function(){
 
 
     const expresiones = {
-    titulo: /^[a-zA-Z0-9\_\-]{5,20}$/, // Letras, numeros, guion y guion_bajo
+    titulo: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras, numeros, guion y guion_bajo
     sinopsis: /^[a-zA-Z0-9\_\-]{10,70}$/, // Letras, numeros, guion y guion_bajo
 	name: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{6,12}$/, // 6 a 12 digitos.
