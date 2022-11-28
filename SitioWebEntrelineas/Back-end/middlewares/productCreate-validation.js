@@ -3,9 +3,9 @@ const path = require('path');
 
 const validateProductCreate = [
     body('titulo').notEmpty().withMessage('¡Hey, el libro debe tener un título!').bail()
-    .isLength({min: 5}).withMessage('¡Debe tener al menos cinco caracteres!'),
+    .isLength({min: 2}).withMessage('¡Debe tener al menos dos caracteres!'),
     body('autor').notEmpty().withMessage('¡Hey, el libro debe tener un autor!').bail()
-    .isLength({min: 5}).withMessage('¡Debe tener al menos cinco caracteres!'),
+    .isLength({min: 2}).withMessage('¡Debe tener al menos dos caracteres!'),
     body('sinopsis').notEmpty().withMessage('¡Hey, el libro debe tener una sinopsis!').bail()
     .isLength({min: 20}).withMessage('¡Debe tener al menos veinte caracteres!'),
     body('precio').notEmpty().withMessage('¡Hey, el libro debe tener un precio!').bail()
@@ -23,7 +23,7 @@ const validateProductCreate = [
         }  
         return true; 
     }),
-    body('genlit').notEmpty().withMessage('¡Debes seleccionar un género!').bail()
+    body('topics').notEmpty().withMessage('¡Debes seleccionar un género!').bail()
     .isIn(['Fantasía', 'Historia', 'Ciencia ficción', 'Romance', 'Política', 'Drama', 'Policial', 'Economía', 'Terror', 'Suspenso', 'Autoayuda']),
     body('edicion').notEmpty().withMessage('¡Hey, el libro debe tener un año de edición!').bail()
     .isInt().withMessage('¡Solo números, eh!'),

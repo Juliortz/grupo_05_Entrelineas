@@ -19,12 +19,12 @@ window.addEventListener('load', function(){
 
 
     const expresiones = {
-    titulo: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras, numeros, guion y guion_bajo
-    sinopsis: /^[a-zA-Z0-9\_\-]{10,70}$/, // Letras, numeros, guion y guion_bajo
-	name: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
+    titulo: /^[a-zA-ZÀ-ÿ\s]{2,120}$/, // Letras, numeros, guion y guion_bajo
+    sinopsis: /^[a-zA-ZÀ-ÿ\s]{2,120}$/, // Letras, numeros, guion y guion_bajo
+	autor: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{6,12}$/, // 6 a 12 digitos.
     precio: /^.{2,5}$/, // 2 a 5 digitos.
-    edicion: /^.{1,2}$/, // 1 a 2 digitos.
+    edicion: /^.{1,4}$/, // 1 a 4 digitos.
     paginas: /^.{1,4}$/, // 1 a 4 digitos.
     idioma: /^[a-zA-ZÀ-ÿ\s]{3,10}$/, // Letras y espacios, pueden llevar acentos.
     presentacion: /^[a-zA-ZÀ-ÿ\s]{5,20}$/, // Letras y espacios, pueden llevar acentos.
@@ -47,7 +47,7 @@ window.addEventListener('load', function(){
         }
     });
     autorLibro.addEventListener('blur', (e)=>{
-        if(!expresiones.name.test(e.target.value)){
+        if(!expresiones.autor.test(e.target.value)){
             autorLibro.classList.add('error')
             spanAutor.classList.remove('invisible');
             spanAutor.classList.add('visible');
@@ -59,7 +59,7 @@ window.addEventListener('load', function(){
         }
     });
     sinopsisLibro.addEventListener('blur', (e)=>{
-        if(!expresiones.titulo.test(e.target.value)){
+        if(!expresiones.sinopsis.test(e.target.value)){
             sinopsisLibro.classList.add('error');
             spanSinopsis.classList.remove('invisible');
             spanSinopsis.classList.add('visible');
