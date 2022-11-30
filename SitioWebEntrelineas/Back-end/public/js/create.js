@@ -1,4 +1,5 @@
 window.addEventListener('load', function(){
+    let formularioCreacion = document.querySelector('#main_form');
     let tituloLibro = document.querySelector('#titulo');
     let spanTitulo = document.querySelector('#spanTitulo');
     let autorLibro = document.querySelector('#autor');
@@ -19,9 +20,9 @@ window.addEventListener('load', function(){
 
 
     const expresiones = {
-    titulo: /^[a-zA-ZÀ-ÿ\s]{2,120}$/, // Letras, numeros, guion y guion_bajo
-    sinopsis: /^[a-zA-ZÀ-ÿ\s]{2,120}$/, // Letras, numeros, guion y guion_bajo
-	autor: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
+    titulo: /^.{2,40}$/, // Letras, numeros, guion y guion_bajo
+    sinopsis: /^.{2,240}$/, // Letras, numeros, guion y guion_bajo
+	autor: /^.{2,40}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{6,12}$/, // 6 a 12 digitos.
     precio: /^.{2,5}$/, // 2 a 5 digitos.
     edicion: /^.{1,4}$/, // 1 a 4 digitos.
@@ -31,6 +32,11 @@ window.addEventListener('load', function(){
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         
     }
+    // const campos = {
+    //     tituloLibro : false,
+    //     autorLibro: false
+
+    // }
 
     tituloLibro.focus()
     tituloLibro.addEventListener('blur', (e)=>{
@@ -39,10 +45,12 @@ window.addEventListener('load', function(){
             spanTitulo.classList.remove('invisible');
             spanTitulo.classList.add('visible');
             
+            
         }else{
             tituloLibro.classList.remove('error');
             spanTitulo.classList.add('invisible');
             spanTitulo.classList.remove('visible');
+           // campos.tituloLibro = true;
             autorLibro.focus();
         }
     });
@@ -135,4 +143,16 @@ window.addEventListener('load', function(){
             spanPresentacion.classList.remove('visible');
         }
     });
+    // formularioCreacion.addEventListener('submit',(e)=>{
+    //     
+    //     if (campos.tituloLibro && campos.autorLibro && ){
+     
+    //         // formulario.submit();
+    //     }else{
+    //         document.getElementById("span--submit").classList.remove('invisible');
+    //         document.getElementById("span--submit").classList.add('visible');
+    //         e.preventDefault();
+    //     }
+
+    // })
 });

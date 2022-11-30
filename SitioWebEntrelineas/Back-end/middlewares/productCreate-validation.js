@@ -24,7 +24,7 @@ const validateProductCreate = [
         return true; 
     }),
     body('topics').notEmpty().withMessage('¡Debes seleccionar un género!').bail()
-    .isIn(['Fantasía', 'Historia', 'Ciencia ficción', 'Romance', 'Política', 'Drama', 'Policial', 'Economía', 'Terror', 'Suspenso', 'Autoayuda']),
+    .isIn(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']),
     body('edicion').notEmpty().withMessage('¡Hey, el libro debe tener un año de edición!').bail()
     .isInt().withMessage('¡Solo números, eh!'),
     body('paginas').notEmpty().withMessage('¡Hey, no olvides el número de páginas!').bail()
