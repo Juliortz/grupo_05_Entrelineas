@@ -10,6 +10,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
+const cors = require('cors');
 
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, './public')));
@@ -22,6 +23,7 @@ app.use(session({
   saveUninitialized: false
 }));
 app.use(cookieParser());
+app.use(cors());
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');

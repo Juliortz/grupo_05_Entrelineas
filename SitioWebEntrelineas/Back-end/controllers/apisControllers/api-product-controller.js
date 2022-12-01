@@ -8,13 +8,13 @@ let img= "";
 const apiProductController = {
     list: (req, res)=> {
         
-        Categories.findAll({
-            include: [{association: "products" }]
+        Products.findAll({
+            include: [{association: "categories"}, {association: "topics"}]
         })
-        .then(categories => {
+        .then(products => {
             return res.status(200).json({
-                total: categories.length,
-                data: categories,
+                total: products.length,
+                data: products,
                 status: 200
             })
         })
@@ -32,6 +32,18 @@ const apiProductController = {
             })
         })
     },
+    categories: (req, res)=> {
+        Categories.findAll({
+            include: [{association: "products" }]
+        })
+        .then(categories => {
+            return res.status(200).json({
+                total: categories.length,
+                data: categories,
+                status: 200
+            })
+        })
+    }
 }
 
 module.exports = apiProductController
