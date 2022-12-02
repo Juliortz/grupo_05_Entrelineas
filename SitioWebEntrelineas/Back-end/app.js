@@ -6,11 +6,14 @@ const productRouter = require('./routes/product-router');
 const userRouter = require('./routes/user-router');
 const apiProductRouter = require('./routes/apisRoutes/api-product-router');
 const apiUserRouter = require('./routes/apisRoutes/api-user-router');
+const apiCategoryRouter = require('./routes/apisRoutes/api-category-router');
+const apiTopicRouter = require('./routes/apisRoutes/api-topic-router');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
+
 
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, './public')));
@@ -33,6 +36,9 @@ app.use('/users', userRouter);
 app.use('/products', productRouter);
 app.use('/api/products', apiProductRouter);
 app.use('/api/users', apiUserRouter);
+app.use('/api/categories', apiCategoryRouter);
+app.use('/api/topics', apiTopicRouter);
+
 
 app.listen(3001, ()=> {
   console.log('Servidor funcionando en puerto 3001')
