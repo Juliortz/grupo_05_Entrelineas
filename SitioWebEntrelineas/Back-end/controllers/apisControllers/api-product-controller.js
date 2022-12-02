@@ -12,6 +12,12 @@ const apiProductController = {
             include: [{association: "categories"}, {association: "topics"}]
         })
         .then(products => {
+
+            products = products.map(product=>{
+                 product.image = 'http://localhost:3001/images/products/' + product.image
+                 return product
+            })
+
             return res.status(200).json({
                 total: products.length,
                 data: products,
@@ -33,6 +39,7 @@ const apiProductController = {
         })
     },
     categories: (req, res)=> {
+        
         Categories.findAll({
             include: [{association: "products" }]
         })
