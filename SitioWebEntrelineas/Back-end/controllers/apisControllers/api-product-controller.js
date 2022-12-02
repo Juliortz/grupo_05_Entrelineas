@@ -3,6 +3,7 @@ const sequelize = db.sequelize;
 
 const Categories = db.Category;
 const Products = db.Product;
+const Topics = db.Topic;
 let img= "";
 
 const apiProductController = {
@@ -43,7 +44,18 @@ const apiProductController = {
                 status: 200
             })
         })
-    }
+    },
+    topics: (req, res)=> {
+        Topics.findAll()
+        .then(topics => {
+            console.log(topics)
+            return res.status(200).json({
+                total: topics.length,
+                data: topics.name,
+                status: 200
+            })
+        })
+    },
 }
 
 module.exports = apiProductController
