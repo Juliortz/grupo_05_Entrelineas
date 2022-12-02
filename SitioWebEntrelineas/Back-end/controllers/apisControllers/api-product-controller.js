@@ -1,9 +1,6 @@
 const db = require('../../database/models');
 const sequelize = db.sequelize;
-
-const Categories = db.Category;
 const Products = db.Product;
-const Topics = db.Topic;
 let img= "";
 
 const apiProductController = {
@@ -33,29 +30,7 @@ const apiProductController = {
             })
         })
     },
-    categories: (req, res)=> {
-        Categories.findAll({
-            include: [{association: "products" }]
-        })
-        .then(categories => {
-            return res.status(200).json({
-                total: categories.length,
-                data: categories,
-                status: 200
-            })
-        })
-    },
-    topics: (req, res)=> {
-        Topics.findAll()
-        .then(topics => {
-            console.log(topics)
-            return res.status(200).json({
-                total: topics.length,
-                data: topics.name,
-                status: 200
-            })
-        })
-    },
+    
 }
 
 module.exports = apiProductController
