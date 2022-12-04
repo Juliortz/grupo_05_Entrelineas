@@ -36,6 +36,18 @@ const apiProductController = {
             })
         })
     },
+    last: (req, res)=> {
+
+        Products.findAll()
+        .then((products)=>{
+            ultimoLibro = products.pop();
+            ultimoLibro.image = 'http://localhost:3001/images/products/' + ultimoLibro.image
+           return res.json({
+            data: ultimoLibro,
+            status: 200,
+        })
+        })
+    }
     
 }
 
