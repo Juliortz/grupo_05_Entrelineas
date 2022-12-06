@@ -147,7 +147,7 @@ const productController = {
               pages: req.body.paginas,
               language: req.body.idioma,
               presentation: req.body.presentacion,
-              image: req.file.filename
+            //   image: req.file.filename
             },
             {
               where: {
