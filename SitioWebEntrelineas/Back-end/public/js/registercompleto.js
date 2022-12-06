@@ -59,10 +59,7 @@ inputs.forEach((input)=>{
 
 formulario.addEventListener('submit', (e)=>{
     
-    
-    
     if (campos.user && campos.first_name && campos.last_name && campos.email && campos.password){
-     
         // formulario.submit();
     }else{
         document.getElementById("span--submit").classList.remove('invisible');
