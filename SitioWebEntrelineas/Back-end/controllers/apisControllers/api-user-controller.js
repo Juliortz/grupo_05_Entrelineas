@@ -31,6 +31,19 @@ const apiUserController = {
             })
         })
     },
+
+    last: (req, res)=> {
+
+        Users.findAll()
+        .then((Users)=>{
+            ultimoUser = Users.pop();
+            ultimoUser.image = 'http://localhost:3001/images/Users/' + ultimoUser.image
+           return res.json({
+            data: ultimoUser,
+            status: 200,
+        })
+        })
+    }
 }
 
 module.exports = apiUserController
