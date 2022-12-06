@@ -8,6 +8,7 @@ const apiProductRouter = require('./routes/apisRoutes/api-product-router');
 const apiUserRouter = require('./routes/apisRoutes/api-user-router');
 const apiCategoryRouter = require('./routes/apisRoutes/api-category-router');
 const apiTopicRouter = require('./routes/apisRoutes/api-topic-router');
+const apiCounterRouter = require('./routes/apisRoutes/api-counter-router');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -38,6 +39,7 @@ app.use('/api/products', apiProductRouter);
 app.use('/api/users', apiUserRouter);
 app.use('/api/categories', apiCategoryRouter);
 app.use('/api/topics', apiTopicRouter);
+app.use('/api/counter', apiCounterRouter);
 
 
 app.listen(3001, ()=> {
