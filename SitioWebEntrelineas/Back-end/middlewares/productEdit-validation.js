@@ -10,7 +10,6 @@ const validateProductEdit = [
     .isLength({min: 5}).withMessage('¡Debe tener al menos cinco caracteres!'),
     body('precio').notEmpty().withMessage('¡Hey, el libro debe tener un precio!').bail()
     .isInt().withMessage('¡Solo números, eh!'),
-    
     body('edicion').notEmpty().withMessage('¡Hey, el libro debe tener un año de edición!').bail()
     .isInt().withMessage('¡Solo números, eh!'),
     body('paginas').notEmpty().withMessage('¡Hey, no olvides el número de páginas!').bail()
