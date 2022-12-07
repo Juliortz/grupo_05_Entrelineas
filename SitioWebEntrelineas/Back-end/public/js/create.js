@@ -39,7 +39,7 @@ window.addEventListener('load', function(){
       idioma: false,
       presentacion: false
     }
-console.log(campos)
+
     tituloLibro.focus()
     tituloLibro.addEventListener('blur', (e)=>{
         if(expresiones.titulo.test(e.target.value)){
@@ -160,12 +160,8 @@ console.log(campos)
           campos.presentacion= false;
         }
     });
-    console.log('//////////')
-    console.log(campos)
-    console.log('//////////')
     formularioCreacion.addEventListener('submit',(e)=>{
       if (campos.titulo && campos.autor && campos.sinopsis && campos.precio && campos.edicion && campos.paginas && campos.idioma && campos.presentacion){
-        console.log(campos)
         formulario.submit();
       }else{
         document.getElementById("span--submit").classList.remove('invisible');
